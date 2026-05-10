@@ -7,7 +7,9 @@ const app = document.querySelector("#app");
 const langKey = "svarga-lang";
 const themeKey = "svarga-theme";
 let lang = localStorage.getItem(langKey) || "ru";
-let theme = localStorage.getItem(themeKey) || "light";
+let theme = localStorage.getItem(themeKey) || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+let revealObserver = null;
 
 function getRoute() {
   const raw = window.location.hash.replace(/^#\/?/, "");
@@ -27,10 +29,31 @@ function copy() {
 
 function applyTheme(content) {
   document.body.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme", theme);
   const label = document.querySelector("[data-theme-label]");
   if (label) {
-    label.textContent = theme === "dark" ? content.themeDark : content.themeLight;
+    label.textContent = theme === "dark" ? content.themeLight : content.themeDark;
   }
+}
+
+function setupReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  if (typeof IntersectionObserver === "undefined") {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+  );
+  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 }
 
 function render() {
@@ -48,6 +71,7 @@ function render() {
   renderMain(route, content);
   applyTheme(content);
   bindChrome(content);
+  setupReveal();
 }
 
 function renderMain(route, content) {
@@ -87,20 +111,32 @@ function bindChrome(content) {
     });
   }
 
-  menuToggle.addEventListener("click", () => {
-    const open = document.body.classList.toggle("has-menu-open");
-    document.body.classList.toggle("has-menu-open", open);
-    menuToggle.setAttribute("aria-expanded", String(open));
-    menuToggle.setAttribute("aria-label", open ? content.closeMenu : content.openMenu);
-    drawer.setAttribute("aria-hidden", String(!open));
-  });
+  if (menuToggle && drawer) {
+    menuToggle.addEventListener("click", () => {
+      const open = !document.body.classList.contains("has-menu-open");
+      document.body.classList.toggle("has-menu-open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? content.closeMenu : content.openMenu);
+      drawer.setAttribute("aria-hidden", String(!open));
+    });
 
-  drawer.addEventListener("click", (event) => {
-    if (!event.target.closest("a")) return;
-    document.body.classList.remove("has-menu-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    drawer.setAttribute("aria-hidden", "true");
-  });
+    drawer.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) return;
+      document.body.classList.remove("has-menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", content.openMenu);
+      drawer.setAttribute("aria-hidden", "true");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && document.body.classList.contains("has-menu-open")) {
+        document.body.classList.remove("has-menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", content.openMenu);
+        drawer.setAttribute("aria-hidden", "true");
+      }
+    }, { once: true });
+  }
 
   document.querySelectorAll(".faq-item button").forEach((button) => {
     button.addEventListener("click", () => button.closest(".faq-item").classList.toggle("is-open"));
@@ -110,7 +146,12 @@ function bindChrome(content) {
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      window.alert(content.formDemo);
+      const status = form.querySelector("[data-form-status]");
+      if (status) {
+        status.classList.add("is-active");
+        status.textContent = content.formSuccess || content.formDemo;
+      }
+      form.reset();
     });
   }
 }

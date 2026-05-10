@@ -21,7 +21,7 @@ export function shell(copy, route) {
           </a>
           <a class="account-link" href="${routeWithLang("account", copy.code)}">${copy.account}</a>
           <button type="button" class="theme-button" data-theme-toggle aria-label="${copy.themeLabel}">
-            <span data-theme-label>${copy.themeLight}</span>
+            <span data-theme-label>${copy.themeDark}</span>
           </button>
           <div class="language-switch" aria-label="${copy.langName}">
             <a data-set-lang="ru" href="#/${route}?lang=ru">RU</a>
@@ -60,8 +60,8 @@ export function shell(copy, route) {
             <a href="tel:${copy.contacts.phoneHref}">${copy.contacts.phone}</a>
           </div>
         </section>
-        ${footerColumn(copy.footer.primaryTitle, copy.footer.primary)}
-        ${footerColumn(copy.footer.secondaryTitle, copy.footer.secondary)}
+        ${footerColumn(copy.footer.primaryTitle, copy.footer.primary, copy.code)}
+        ${footerColumn(copy.footer.secondaryTitle, copy.footer.secondary, copy.code)}
       </div>
       <div class="footer-bottom">
         <p>${copy.footer.credit}</p>
@@ -71,11 +71,11 @@ export function shell(copy, route) {
   `;
 }
 
-function footerColumn(title, links) {
+function footerColumn(title, links, code) {
   return `
     <section class="footer-column">
       <h2>${title}</h2>
-      <ul>${links.map(([id, label]) => `<li><a href="${routeWithLang(id, "ru")}" data-lang-route="${id}">${label}</a></li>`).join("")}</ul>
+      <ul>${links.map(([id, label]) => `<li><a href="${routeWithLang(id, code)}" data-lang-route="${id}">${label}</a></li>`).join("")}</ul>
     </section>
   `;
 }

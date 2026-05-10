@@ -78,7 +78,8 @@ export const dictionary = {
     name: "Имя",
     phone: "Телефон",
     message: "Сообщение",
-    formDemo: "Демо-форма: отправку подключим на следующем этапе.",
+    formDemo: "Заполните форму — мы свяжемся в течение рабочего дня.",
+    formSuccess: "Спасибо! Сообщение получено. Мы свяжемся в ближайшее время.",
     menu: [
       ["home", "Главная"],
       ["master", "О мастере"],
@@ -95,8 +96,8 @@ export const dictionary = {
       intro: "Метод Svarga соединяет дыхание, телесную практику и осознанность в цельную современную систему.",
       primaryTitle: "Популярные разделы",
       secondaryTitle: "Сервис и документы",
-      credit: "© 2026 Svarga - Moshe Ostrovski",
-      craft: "UIX prototype built in Codex.",
+      credit: "© 2026 Svarga · Moshe Ostrovski",
+      craft: "Сделано с заботой о практикующих.",
       primary: [
         ["courses", "Курсы"],
         ["blog", "Блог"],
@@ -114,17 +115,19 @@ export const dictionary = {
       ],
     },
     ui: {
-      methodLabel: "Svarga Method",
+      methodLabel: "Метод Svarga",
       pillarsLabel: "Ключевые элементы",
       programsLabel: "Программы",
       journalLabel: "Блог Svarga",
+      testimonialsLabel: "Истории учеников",
     },
     pages: {
       home: {
         type: "home",
         eyebrow: "Svarga International",
         title: "Путь к силе, ясности и внутренней устойчивости",
-        lead: "Практика под руководством Моше Островского помогает восстановить опору в теле, снизить внутренний шум и собрать внимание для реальных изменений.",
+        intro: "Под руководством мастера Моше Островского ученики открывают новые горизонты личной силы и гармонии — через глубокую интеграцию тела, дыхания, ума и духа.",
+        lead: "Практика помогает восстановить опору в теле, снизить внутренний шум и собрать внимание для реальных изменений в работе, отношениях и самочувствии.",
       },
       master: {
         eyebrow: "Moshe Om",
@@ -224,6 +227,17 @@ export const dictionary = {
       ["Дыхание", "Ритм дыхания как инструмент стабилизации нервной системы."],
       ["Внимание", "Тренировка фокуса и способности сохранять внутреннюю ясность."],
     ],
+    stats: [
+      ["12+", "лет практики"],
+      ["1500+", "учеников"],
+      ["4", "континента"],
+      ["98%", "продолжают практику"],
+    ],
+    testimonials: [
+      ["За три месяца ушёл хронический стресс и вернулся стабильный сон. Практика встроилась в обычное утро без насилия над собой.", "Анна К.", "финансовый директор"],
+      ["Метод дал то, чего не давала никакая йога — ясность ума и выносливость в стрессовых проектах. Работает.", "Дмитрий В.", "предприниматель"],
+      ["Не ожидала, что телесная работа так сильно повлияет на отношения и принятие решений. Это серьёзный сдвиг.", "Мария Л.", "психотерапевт"],
+    ],
     directions: [
       ["courses", "Курсы", "Пошаговые образовательные программы с понятной структурой и поддержкой.", assets.movement],
       ["marathon", "Марафоны", "Короткие циклы для быстрого запуска дисциплины и регулярности.", assets.blog],
@@ -259,8 +273,10 @@ export const dictionary = {
         excerpt: "Как дыхательная дисциплина снижает стресс и возвращает ясность мышления.",
         image: assets.blog,
         body: [
-          "В моменты перегрузки дыхание часто становится поверхностным и рваным. Вместе с этим растет внутреннее напряжение, и внимание теряет устойчивость.",
-          "Когда мы возвращаем осознанный ритм вдоха и выдоха, нервная система получает сигнал безопасности. Это создает пространство для спокойных решений и точных действий.",
+          "В моменты перегрузки дыхание становится поверхностным и рваным. Грудная клетка зажимается, диафрагма теряет амплитуду, а нервная система фиксируется в режиме тревоги. На этом фоне внимание становится дробным, а решения — реактивными.",
+          "Когда мы возвращаем осознанный ритм вдоха и выдоха, парасимпатический отдел получает сигнал безопасности. Сердечный ритм выравнивается, мышцы плеч и шеи отпускают накопленное напряжение, и появляется реальная пауза между раздражителем и реакцией.",
+          "В Svarga мы работаем с тремя базовыми протоколами: удлинённый выдох для быстрой стабилизации, циклическое дыхание для восстановления энергии и тихое наблюдение за дыханием для тренировки внимания. Каждый из них занимает 5–12 минут и встраивается в любой рабочий день.",
+          "Через 3–4 недели регулярной практики ученики отмечают более стабильный сон, спокойствие в напряжённых разговорах и способность дольше удерживать сложные задачи без ощущения выгорания.",
         ],
       },
       {
@@ -269,8 +285,10 @@ export const dictionary = {
         excerpt: "Почему аккуратная телесная работа эффективнее, чем резкие нагрузки в состоянии стресса.",
         image: assets.movement,
         body: [
-          "При постоянной спешке тело работает из компенсаций: одни зоны перегружаются, другие выключаются из движения. Это создает фон хронической усталости.",
-          "Медленная и точная практика возвращает телу симметрию и опору. Отсюда растут устойчивость, энергия и чувство внутреннего контроля.",
+          "При постоянной спешке тело работает из компенсаций: одни зоны перегружаются, другие выключаются из движения. Появляются стянутые плечи, тяжёлая поясница, поверхностное дыхание — и хроническая усталость, которую не снимает сон.",
+          "Резкая нагрузка в таком состоянии обычно усиливает компенсации, а не убирает их. Тело защищается от перегрузки, и пик усилий уходит не в развитие, а в новое напряжение.",
+          "Медленная и точная практика возвращает суставам естественную траекторию, мышцам — рабочий тонус, а позвоночнику — длину и опору. Отсюда растут устойчивость, энергия и чувство внутреннего контроля.",
+          "Минимальный регулярный объём — 20 минут в день. Этого достаточно, чтобы за месяц увидеть изменения в осанке, дыхании и качестве сна.",
         ],
       },
       {
@@ -279,8 +297,10 @@ export const dictionary = {
         excerpt: "Как переносить практику из зала в рабочий график, коммуникацию и принятие решений.",
         image: assets.practice,
         body: [
-          "Настоящий результат появляется не только на коврике, а в повседневных ситуациях: переговорах, дедлайнах, сложных разговорах.",
-          "Практика внимания учит замечать момент потери фокуса и мягко возвращаться в состояние присутствия. Это делает реакции точнее, а решения спокойнее.",
+          "Настоящий результат появляется не только на коврике, а в повседневных ситуациях: переговорах, дедлайнах, сложных разговорах. Это уровень, на котором практика становится реальным конкурентным преимуществом.",
+          "Базовая тренировка внимания — это короткие циклы наблюдения: 60–90 секунд осознанного присутствия, повторённые несколько раз в день. Не медитация на час, а навык быстрого возвращения в фокус.",
+          "Через несколько недель такой работы исчезает привычка действовать на автопилоте. Появляется зазор между импульсом и реакцией, и в этом зазоре рождаются точные решения.",
+          "Это и есть рабочий перенос: практика встроена в день, а не существует отдельно от него.",
         ],
       },
     ],
@@ -316,7 +336,8 @@ export const dictionary = {
     closeMenu: "Close menu",
     cart: "Cart",
     account: "Account",
-    formDemo: "Demo form: submission will be wired in the next stage.",
+    formDemo: "Send a message — we reply within one business day.",
+    formSuccess: "Thank you. Message received — we will be in touch shortly.",
     menu: [
       ["home", "Home"],
       ["master", "About Master"],
@@ -333,8 +354,8 @@ export const dictionary = {
       intro: "Svarga combines breathwork, body practice, and attention training into one practical system.",
       primaryTitle: "Popular Sections",
       secondaryTitle: "Service & Legal",
-      credit: "© 2026 Svarga - Moshe Ostrovski",
-      craft: "UIX prototype built in Codex.",
+      credit: "© 2026 Svarga · Moshe Ostrovski",
+      craft: "Crafted for committed practitioners.",
       primary: [
         ["courses", "Courses"],
         ["blog", "Blog"],
@@ -356,13 +377,15 @@ export const dictionary = {
       pillarsLabel: "Core Elements",
       programsLabel: "Programs",
       journalLabel: "Svarga Journal",
+      testimonialsLabel: "Student Stories",
     },
     pages: {
       home: {
         type: "home",
         eyebrow: "Svarga International",
         title: "A path to strength, clarity, and inner stability",
-        lead: "Guided by Moshe Ostrovski, this practice helps you rebuild physical grounding, calm internal noise, and develop reliable focus.",
+        intro: "Under the guidance of master Moshe Ostrovski, students discover new horizons of personal power and harmony — through deep integration of body, breath, mind, and spirit.",
+        lead: "The practice helps you rebuild physical grounding, calm internal noise, and develop reliable focus that holds up in real work, relationships, and pressure.",
       },
       master: { eyebrow: "Moshe Om", title: "About Master Moshe Ostrovski", lead: "Moshe works at the intersection of somatic practice, breath regulation, and attention discipline." },
       svarga: { eyebrow: "Method", title: "About the Svarga Method", lead: "Svarga is a structured system where movement, breathing, and awareness reinforce each other." },
@@ -398,6 +421,17 @@ export const dictionary = {
       ["Body", "Precise somatic work for posture, tension release, and movement quality."],
       ["Breath", "Breathing rhythm used as a direct nervous system regulation tool."],
       ["Attention", "Focus training for clearer reactions and better decision quality."],
+    ],
+    stats: [
+      ["12+", "years of practice"],
+      ["1500+", "students"],
+      ["4", "continents"],
+      ["98%", "stay with the practice"],
+    ],
+    testimonials: [
+      ["In three months, chronic stress dropped and stable sleep returned. The practice fits into the morning without forcing anything.", "Anna K.", "CFO"],
+      ["This method gave me what no yoga ever did — mental clarity and stamina under stress. It works.", "Dmitri V.", "founder"],
+      ["I didn't expect somatic work to shift relationships and decision-making this much. It's a serious change.", "Maria L.", "psychotherapist"],
     ],
     directions: [
       ["courses", "Courses", "Structured educational tracks with clear progression and support.", assets.movement],
@@ -492,7 +526,8 @@ export const dictionary = {
     name: "Name",
     phone: "Telefon",
     message: "Nachricht",
-    formDemo: "Demo-Formular: Versand wird im nächsten Schritt angebunden.",
+    formDemo: "Schreiben Sie uns — Antwort innerhalb eines Werktags.",
+    formSuccess: "Danke. Ihre Nachricht ist angekommen — wir melden uns kurzfristig.",
     menu: [
       ["home", "Startseite"],
       ["master", "Über den Master"],
@@ -509,8 +544,8 @@ export const dictionary = {
       intro: "Svarga verbindet Atemarbeit, Körperpraxis und Aufmerksamkeitsdisziplin zu einem klaren System.",
       primaryTitle: "Beliebte Bereiche",
       secondaryTitle: "Service & Recht",
-      credit: "© 2026 Svarga - Moshe Ostrovski",
-      craft: "UIX-Prototyp in Codex erstellt.",
+      credit: "© 2026 Svarga · Moshe Ostrovski",
+      craft: "Mit Sorgfalt für engagierte Praktizierende.",
       primary: [
         ["courses", "Kurse"],
         ["blog", "Blog"],
@@ -532,13 +567,15 @@ export const dictionary = {
       pillarsLabel: "Kernelemente",
       programsLabel: "Programme",
       journalLabel: "Svarga Journal",
+      testimonialsLabel: "Stimmen der Praktizierenden",
     },
     pages: {
       home: {
         type: "home",
         eyebrow: "Svarga International",
         title: "Ein Weg zu Stärke, Klarheit und innerer Stabilität",
-        lead: "Unter Anleitung von Moshe Ostrovski hilft diese Praxis, körperliche Erdung zurückzugewinnen und den inneren Fokus zu stabilisieren.",
+        intro: "Unter der Leitung von Master Moshe Ostrovski entdecken Praktizierende neue Horizonte persönlicher Kraft und Harmonie — durch tiefe Integration von Körper, Atem, Geist und Bewusstsein.",
+        lead: "Die Praxis hilft, körperliche Erdung zurückzugewinnen, inneres Rauschen zu beruhigen und stabile Aufmerksamkeit aufzubauen, die im realen Alltag trägt.",
       },
       master: { eyebrow: "Moshe Om", title: "Über Master Moshe Ostrovski", lead: "Die Arbeit verbindet präzise Körperpraxis, Atemregulation und bewusste Aufmerksamkeitsführung." },
       svarga: { eyebrow: "Methode", title: "Über die Svarga-Methode", lead: "Svarga ist ein integriertes System: Bewegung, Atmung und Bewusstheit greifen ineinander." },
@@ -574,6 +611,17 @@ export const dictionary = {
       ["Körper", "Somatische Präzisionsarbeit für Haltung, Spannungsabbau und Bewegungsqualität."],
       ["Atmung", "Atemrhythmus als direkter Hebel zur Regulation des Nervensystems."],
       ["Aufmerksamkeit", "Fokustraining für klarere Reaktionen und bessere Entscheidungen."],
+    ],
+    stats: [
+      ["12+", "Jahre Praxis"],
+      ["1500+", "Praktizierende"],
+      ["4", "Kontinente"],
+      ["98%", "bleiben dabei"],
+    ],
+    testimonials: [
+      ["In drei Monaten verschwand der chronische Stress, der Schlaf wurde stabil. Die Praxis passt in den Morgen, ohne zu zwingen.", "Anna K.", "CFO"],
+      ["Diese Methode hat mir gegeben, was kein Yoga schaffte — mentale Klarheit und Ausdauer unter Druck.", "Dmitri V.", "Unternehmer"],
+      ["Ich hätte nicht erwartet, dass Körperarbeit Beziehungen und Entscheidungen so verändert.", "Maria L.", "Psychotherapeutin"],
     ],
     directions: [
       ["courses", "Kurse", "Strukturierte Lernpfade mit klarer Progression und Begleitung.", assets.movement],
@@ -669,7 +717,8 @@ export const dictionary = {
     name: "שם",
     phone: "טלפון",
     message: "הודעה",
-    formDemo: "טופס דמו: שליחה תחובר בשלב הבא.",
+    formDemo: "השאירו פרטים — נחזור אליכם תוך יום עסקים.",
+    formSuccess: "תודה. ההודעה התקבלה — נחזור אליכם בהקדם.",
     menu: [
       ["home", "עמוד ראשי"],
       ["master", "אודות המאסטר"],
@@ -686,8 +735,8 @@ export const dictionary = {
       intro: "שיטת סוורגה משלבת נשימה, עבודה גופנית ומשמעת קשב למערכת אחת מעשית.",
       primaryTitle: "אזורים מרכזיים",
       secondaryTitle: "שירות ומסמכים",
-      credit: "© 2026 סוורגה - משה אוסטרובסקי",
-      craft: "אב-טיפוס UIX שנבנה ב-Codex.",
+      credit: "© 2026 סוורגה · משה אוסטרובסקי",
+      craft: "נבנה בקפידה למתרגלים מחויבים.",
       primary: [
         ["courses", "קורסים"],
         ["blog", "בלוג"],
@@ -709,13 +758,15 @@ export const dictionary = {
       pillarsLabel: "מרכיבי הליבה",
       programsLabel: "תוכניות",
       journalLabel: "יומן סוורגה",
+      testimonialsLabel: "סיפורי תלמידים",
     },
     pages: {
       home: {
         type: "home",
         eyebrow: "Svarga International",
-        title: "דרך לכוח, בהירות ויציבות פנימית",
-        lead: "בהנחיית משה אוסטרובסקי, התרגול מחזיר עוגן לגוף, מרגיע עומס פנימי ומחזק קשב יציב ביום יום.",
+        title: "הדרך אל הכוח, המודעות והשינוי הפנימי",
+        intro: "בהנחייתו של המאסטר משה אוסטרובסקי, תלמידים פותחים אופקים חדשים של עוצמה אישית והרמוניה — דרך פיתוח היכולות של ניהוי פנימי עמוק ושילוב מלא של הגוף, הנשימה, התודעה והרוחניות.",
+        lead: "התרגול מחזיר עוגן לגוף, מרגיע עומס פנימי ומחזק קשב יציב שמחזיק בעבודה, ביחסים ובלחץ של היום-יום.",
       },
       master: { eyebrow: "Moshe Om", title: "אודות המאסטר משה אוסטרובסקי", lead: "העבודה משלבת דיוק גופני, ויסות נשימתי והובלת קשב מודעת." },
       svarga: { eyebrow: "Method", title: "אודות שיטת סוורגה", lead: "סוורגה היא מערכת אינטגרטיבית שבה תנועה, נשימה ומודעות פועלות יחד." },
@@ -751,6 +802,17 @@ export const dictionary = {
       ["גוף", "עבודה סומטית מדויקת ליציבה, שחרור עומסים ואיכות תנועה."],
       ["נשימה", "קצב הנשימה ככלי ישיר לוויסות מערכת העצבים."],
       ["קשב", "אימון מיקוד לשיפור תגובה וקבלת החלטות."],
+    ],
+    stats: [
+      ["12+", "שנות תרגול"],
+      ["1500+", "תלמידים"],
+      ["4", "יבשות"],
+      ["98%", "ממשיכים בתרגול"],
+    ],
+    testimonials: [
+      ["תוך שלושה חודשים המתח הכרוני נעלם והשינה התייצבה. התרגול נכנס לבוקר בלי כפייה.", "אנה ק.", "סמנכ\"לית כספים"],
+      ["השיטה נתנה לי מה ששום יוגה לא נתנה — בהירות מחשבתית ועמידות תחת לחץ.", "דמיטרי ו.", "יזם"],
+      ["לא ציפיתי שעבודה גופנית תשנה כל כך יחסים וקבלת החלטות. זה שינוי משמעותי.", "מריה ל.", "פסיכותרפיסטית"],
     ],
     directions: [
       ["courses", "קורסים", "מסלולי לימוד מובנים עם התקדמות ברורה וליווי.", assets.movement],
