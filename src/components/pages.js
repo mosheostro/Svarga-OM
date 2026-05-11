@@ -126,7 +126,7 @@ export function masterPage(copy) {
           <p>${bio.intro || ""}</p>
           ${(bio.paragraphs || []).map((p) => `<p>${p}</p>`).join("")}
         </div>
-        <figure class="image-frame reveal"><img src="${assets.mosheBowl}" alt="Moshe Ostrovski" /></figure>
+        <figure class="image-frame master-portrait reveal"><img src="${assets.moshePortrait}" alt="Moshe Ostrovski" onerror="this.onerror=null;this.src='${assets.mosheBowl}';" /></figure>
       </div>
     </section>
     ${traditions.length ? `
@@ -258,7 +258,7 @@ export function programPage(copy, id) {
     <section class="section ${notice ? "compact-top" : ""}">
       <div class="container">
         <div class="cards-grid">
-          ${cards.map(([title, text, image], index) => programCard(copy, title, text, image || [assets.movement, assets.blog, assets.practice][index % 3])).join("")}
+          ${cards.map(([title, text, image, slug], index) => programCard(copy, title, text, image || [assets.movement, assets.blog, assets.practice][index % 3], slug || "contact")).join("")}
         </div>
       </div>
     </section>
@@ -425,15 +425,15 @@ export function practicePage(copy) {
       <div class="container">
         <div class="poses-strip reveal">
           <figure class="pose-figure">
-            <div class="pose-frame"><img src="${assets.mosheBowl}" alt="" /></div>
+            <div class="pose-frame"><img src="${assets.mosheBowl}" alt="" onerror="this.onerror=null;this.src='${assets.mosheHero}';" /></div>
             <figcaption>${poseCaps[0]}</figcaption>
           </figure>
           <figure class="pose-figure">
-            <div class="pose-frame"><img src="${assets.mosheShoulder}" alt="" /></div>
+            <div class="pose-frame"><img src="${assets.mosheShoulder}" alt="" onerror="this.onerror=null;this.src='${assets.mosheHero}';" /></div>
             <figcaption>${poseCaps[1]}</figcaption>
           </figure>
           <figure class="pose-figure">
-            <div class="pose-frame"><img src="${assets.mosheWushu}" alt="" /></div>
+            <div class="pose-frame"><img src="${assets.mosheWushu}" alt="" onerror="this.onerror=null;this.src='${assets.mosheHero}';" /></div>
             <figcaption>${poseCaps[2]}</figcaption>
           </figure>
         </div>
@@ -461,6 +461,75 @@ export function practicePage(copy) {
       </div>
     </section>
   `;
+}
+
+export function programDetailPage(copy, slug) {
+  const detail = (copy.programDetails || {})[slug];
+  const card = findCardBySlug(copy, slug);
+  if (!card || !detail) {
+    return simplePage(copy, "home");
+  }
+  const [title, lead, image] = card;
+  const category = slug.split("-")[0];
+  const backRoute = category === "course" ? "courses" : category === "marathon" ? "marathon" : "retreat";
+  const backLabel = copy.pages[backRoute]?.title || copy.details;
+  const meta = [
+    [copy.detailFormatLabel || "Формат", detail.format],
+    [copy.detailDurationLabel || "Длительность", detail.duration],
+    [copy.detailAudienceLabel || "Для кого", detail.audience],
+  ].filter(([, v]) => v);
+
+  return `
+    <section class="page-hero">
+      <div class="container detail-hero-grid">
+        <div class="detail-hero-copy">
+          <p class="eyebrow">${copy.pages[backRoute]?.eyebrow || ""}</p>
+          <h1>${title}</h1>
+          <p class="lead">${lead}</p>
+          <a class="text-link back-link" href="${routeWithLang(backRoute, copy.code)}">← ${backLabel}</a>
+        </div>
+        <figure class="detail-hero-image">
+          <img src="${image}" alt="" onerror="this.onerror=null;this.src='/assets/svarga-practice.webp';" />
+        </figure>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container detail-layout">
+        <div class="detail-body">
+          ${(detail.body || [lead]).map((p) => `<p>${p}</p>`).join("")}
+        </div>
+        <aside class="detail-meta">
+          ${meta.map(([k, v]) => `
+            <div class="meta-row">
+              <span class="meta-key">${k}</span>
+              <span class="meta-val">${v}</span>
+            </div>
+          `).join("")}
+          <a class="pill-button primary detail-cta" href="${routeWithLang("contact", copy.code)}">${copy.ctaLearn}</a>
+        </aside>
+      </div>
+    </section>
+    ${detail.testimonial ? `
+    <section class="section muted-band">
+      <div class="container narrow">
+        <article class="testimonial-card reveal detail-testimonial">
+          <p class="quote">${detail.testimonial[0]}</p>
+          <div class="testimonial-author">
+            <span class="author-dot" aria-hidden="true"></span>
+            <div><strong>${detail.testimonial[1]}</strong><br />${detail.testimonial[2] || ""}</div>
+          </div>
+        </article>
+      </div>
+    </section>` : ""}
+  `;
+}
+
+function findCardBySlug(copy, slug) {
+  for (const cat of Object.keys(copy.programCards || {})) {
+    const found = copy.programCards[cat].find((c) => c[3] === slug);
+    if (found) return found;
+  }
+  return null;
 }
 
 export function simplePage(copy, id) {
@@ -514,11 +583,13 @@ function programDirectionCards(copy) {
 }
 
 function programCard(copy, title, text, image, link = "contact") {
+  const fallback = "/assets/svarga-practice.webp";
+  const hasDetail = copy.programDetails && copy.programDetails[link];
   return `
     <article class="program-card reveal">
-      <img src="${image}" alt="" />
+      <img src="${image}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';" />
       <div class="program-card-body">
-        <span class="tag">${copy.tagsSoon}</span>
+        ${!hasDetail ? `<span class="tag">${copy.tagsSoon}</span>` : ""}
         <h3>${title}</h3>
         <p>${text}</p>
         <a class="text-link" href="${routeWithLang(link, copy.code)}">${copy.details}</a>

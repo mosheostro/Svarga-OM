@@ -33,9 +33,12 @@ export function shell(copy, route) {
       </div>
     </header>
     <nav class="drawer" data-drawer aria-label="${copy.openMenu}" aria-hidden="true">
-      <div class="drawer-image"><img src="${assets.mosheMenu}" alt="" /></div>
+      <div class="drawer-image">
+        <span class="drawer-watermark" aria-hidden="true">SVARGA</span>
+        <img src="${assets.mosheMenu}" alt="" />
+      </div>
       <div class="drawer-panel">
-        <img class="drawer-logo" src="${assets.logoWord}" alt="Svarga" />
+        <p class="drawer-wordmark" aria-hidden="true">SVARGA</p>
         <ul class="drawer-menu">
           ${copy.menu
             .map(([id, title]) => `<li><a class="${route === id ? "is-current" : ""}" href="${routeWithLang(id, copy.code)}">${title}</a></li>`)

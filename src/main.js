@@ -1,6 +1,6 @@
 import { dictionary, routes } from "./data/content.js";
 import { shell } from "./components/layout.js";
-import { articlePage, blogPage, contactPage, faqPage, homePage, masterPage, practicePage, programPage, simplePage, svargaPage, testimonialsPage } from "./components/pages.js";
+import { articlePage, blogPage, contactPage, faqPage, homePage, masterPage, practicePage, programDetailPage, programPage, simplePage, svargaPage, testimonialsPage } from "./components/pages.js";
 import "./styles/main.css";
 
 const app = document.querySelector("#app");
@@ -79,9 +79,11 @@ function renderMain(route, content) {
   const main = document.querySelector("#main");
   const postSlug = route.startsWith("post-") ? route.slice(5) : null;
   const post = postSlug ? content.articles.find((item) => item.slug === postSlug) : null;
+  const isProgramDetail = /^(course|marathon|retreat)-/.test(route);
 
   if (post) main.innerHTML = articlePage(content, post);
-  else if (route === "home" || !routes.includes(route)) main.innerHTML = homePage(content);
+  else if (isProgramDetail && content.programDetails && content.programDetails[route]) main.innerHTML = programDetailPage(content, route);
+  else if (route === "home" || (!routes.includes(route) && !isProgramDetail)) main.innerHTML = homePage(content);
   else if (route === "master") main.innerHTML = masterPage(content);
   else if (route === "svarga") main.innerHTML = svargaPage(content);
   else if (["courses", "marathon", "retreat"].includes(route)) main.innerHTML = programPage(content, route);
