@@ -206,12 +206,12 @@ const ru = {
     blog: {
       eyebrow: "Журнал",
       title: "Блог Моше Островского",
-      lead: "Пространство для тех, кто ищет глубокое понимание того, как работают тело, дыхание и ум — и как с ними эффективно взаимодействовать.",
+      lead: "Методы, которые интегрируют лучшие традиции цигуна, йоги, дыхательных практик и психологии. Пространство для тех, кто ищет глубокое понимание того, как работают тело, дыхание и ум — и как с ними эффективно взаимодействовать.",
     },
     contact: {
       eyebrow: "Контакты",
       title: "Связаться с Моше Островским",
-      lead: "Вопрос о курсах, марафонах или ретритах? Свяжитесь по телефону, через WhatsApp или заполните форму — отвечу лично.",
+      lead: "Вопрос о курсах, марафонах или ретритах? Свяжитесь по телефону, через WhatsApp или заполните форму — отвечу лично. Подпишитесь также на мой Telegram-канал: регулярные публикации, анонсы событий и новые материалы — чтобы быть в курсе главного.",
     },
     testimonials: {
       eyebrow: "Отзывы",
@@ -753,12 +753,12 @@ const he = {
     blog: {
       eyebrow: "יומן",
       title: "הבלוג של משה אוסטרובסקי",
-      lead: "מרחב למי שמחפש להבין לעומק איך עובדים הגוף, הנשימה והתודעה — ואיך לתקשר איתם ביעילות.",
+      lead: "שיטות שמשלבות את המסורות הטובות של צ'י-גונג, יוגה, תרגולי נשימה ופסיכולוגיה. מרחב למי שמחפש להבין לעומק איך עובדים הגוף, הנשימה והתודעה — ואיך לתקשר איתם ביעילות.",
     },
     contact: {
       eyebrow: "צור קשר",
       title: "צרו קשר עם משה אוסטרובסקי",
-      lead: "שאלה על הקורסים, המרתונים או הריטריטים? צרו קשר טלפוני, בוואטסאפ או דרך הטופס — אענה אישית.",
+      lead: "שאלה על הקורסים, המרתונים או הריטריטים? צרו קשר טלפוני, בוואטסאפ או דרך הטופס — אענה אישית. הצטרפו גם לערוץ הטלגרם שלי: פרסומים שוטפים, הכרזות על אירועים וחומרים חדשים — כדי להישאר מעודכנים.",
     },
     testimonials: {
       eyebrow: "המלצות",
@@ -1253,8 +1253,8 @@ const en = {
     marathon: { eyebrow: "Intensive", title: "Marathons", lead: "Past and upcoming marathons: announcements, details, and abstracts. Get acquainted with the program in advance and register." },
     retreat: { eyebrow: "Retreats", title: "Retreats — the path of long-term change", lead: "A conscious exit from the daily rhythm. A deep dive that changes the foundation of your state — for years." },
     faq: { eyebrow: "FAQ", title: "Questions & answers", lead: "30 practical answers about format, contraindications, session length, and effects of regular practice." },
-    blog: { eyebrow: "Journal", title: "Moshe Ostrovski's Journal", lead: "A space for those who want to deeply understand how body, breath, and mind work — and how to interact with them effectively." },
-    contact: { eyebrow: "Contact", title: "Contact Moshe Ostrovski", lead: "Question about courses, marathons, or retreats? Call, WhatsApp, or fill the form — I reply personally." },
+    blog: { eyebrow: "Journal", title: "Moshe Ostrovski's Journal", lead: "Methods that integrate the best traditions of qigong, yoga, breathwork, and psychology. A space for those who want to deeply understand how body, breath, and mind work — and how to interact with them effectively." },
+    contact: { eyebrow: "Contact", title: "Contact Moshe Ostrovski", lead: "Question about courses, marathons, or retreats? Call, WhatsApp, or fill the form — I reply personally. Subscribe to my Telegram channel for regular publications, event announcements, and new materials." },
     testimonials: { eyebrow: "Reviews", title: "Reviews & student stories", lead: "Words from students who completed courses, marathons, and retreats. Direct confirmation that the method works." },
     account: { eyebrow: "Account", title: "Account", lead: "Your programs, progress, and private materials will appear here after auth integration." },
     privacy: { eyebrow: "Legal", title: "Privacy Policy", lead: "Final legal text will be published at production launch." },
