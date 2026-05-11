@@ -28,6 +28,11 @@ export const assets = {
   imgPillar: "/assets/img-8.png",
   imgLotus: "/assets/img-9.png",
   imgSpheres: "/assets/img-12.png",
+  imgTree: "/assets/p-07.jpg",
+  imgBrain2: "/assets/p-16.jpg",
+  imgMartialAsian: "/assets/p-17.jpg",
+  imgMartialWarrior: "/assets/p-23.jpg",
+  mosheRetreat: "/assets/p-29.jpg",
 };
 
 export const routes = [
@@ -269,11 +274,11 @@ const ru = {
     courses: [
       ["Цигун жизненной силы", "Древняя китайская практика для восстановления и гармонизации энергии: дыхание, медитация, мягкие движения.", assets.imgQigong, "course-qigong"],
       ["ЗДРАВОТЕЛ", "Даосская практика для опытных практиков. Внутренняя сила, энергетический баланс, пробуждение природной энергии тела.", assets.imgDaoist, "course-zdravotel"],
-      ["Древо совершенства", "Концентрация, внутренняя сила и пробуждение духа. Повышение уровня энергии и устойчивая гармония в жизни.", assets.imgElements, "course-derevo"],
+      ["Древо совершенства", "Концентрация, внутренняя сила и пробуждение духа. Повышение уровня энергии и устойчивая гармония в жизни.", assets.imgTree, "course-derevo"],
       ["Железная рубашка", "Внутренняя устойчивость и плотность тела через дыхание и точечное напряжение. Опытный уровень — после Цигуна жизненной силы.", assets.mosheWushu, "course-iron-shirt"],
-      ["Кремень", "Базовый цикл волевой устойчивости и физической плотности. Специальные дыхательные и силовые техники.", assets.mosheWushu, "course-kremen"],
-      ["Кремень H2", "Продвинутый цикл укрепления внутренней силы и устойчивости. Для практикующих со стажем.", assets.imgPillar, "course-kremen-h2"],
-      ["Сенситив — Здоровье мозга", "Тренировка чувствительности, концентрации и нейропластичности. Дыхательные техники и упражнения внимания.", assets.imgBrain, "course-sensitiv"],
+      ["Кремень 1-й уровень", "Базовый цикл волевой устойчивости и физической плотности. Специальные дыхательные и силовые техники.", assets.imgMartialAsian, "course-kremen"],
+      ["Кремень 2-й уровень", "Продвинутый цикл укрепления внутренней силы и устойчивости. Для практикующих со стажем.", assets.imgMartialWarrior, "course-kremen-h2"],
+      ["Сенситив — Здоровье мозга", "Тренировка чувствительности, концентрации и нейропластичности. Дыхательные техники и упражнения внимания.", assets.imgBrain2, "course-sensitiv"],
     ],
     marathon: [
       ["Даосский жёсткий цигун", "Интенсивная практика укрепления тела и структуры через даосские методы. Работа направлена на собранность, физическую устойчивость и укрепление базовой энергетической системы.", assets.mosheWushu, "marathon-hard-qigong"],
@@ -286,7 +291,7 @@ const ru = {
     retreat: [
       ["Випассана Турия (тибетский подход)", "Мауна, йога осознанных сновидений, медитации наблюдателя. 24-часовая осознанность.", assets.imgVipassana, "retreat-vipassana-turiya"],
       ["Даосский цигун — ретрит", "От мягких практик к интенсивным даосским техникам. Жизненная сила, нервная система, эмоциональный баланс.", assets.imgDaoist, "retreat-daoist"],
-      ["Авторский ретрит Моше", "Камерный формат глубокой работы один-на-один с группой. Под индивидуальные запросы участников.", assets.mosheBowl, "retreat-signature"],
+      ["Авторский ретрит Моше", "Камерный формат глубокой работы один-на-один с группой. Под индивидуальные запросы участников.", assets.mosheRetreat, "retreat-signature"],
     ],
   },
   traditions: [
@@ -815,11 +820,11 @@ const he = {
     courses: [
       ["צ'י-גונג של כוח החיים", "תרגול סיני עתיק להרמוניה של האנרגיה: נשימה, מדיטציה, תנועות עדינות.", assets.imgQigong, "course-qigong"],
       ["זדרווטל", "תרגול דאואיסטי למתרגלים מנוסים. כוח פנימי, איזון אנרגטי, התעוררות הגוף.", assets.imgDaoist, "course-zdravotel"],
-      ["עץ השלמות", "ריכוז, כוח פנימי, התעוררות הרוח. הרמוניה יציבה לחיים.", assets.imgElements, "course-derevo"],
+      ["עץ השלמות", "ריכוז, כוח פנימי, התעוררות הרוח. הרמוניה יציבה לחיים.", assets.imgTree, "course-derevo"],
       ["חולצת הברזל", "יציבות פנימית וצפיפות גוף דרך נשימה ומתח נקודתי. רמה מנוסה — אחרי צ'י-גונג של כוח החיים.", assets.mosheWushu, "course-iron-shirt"],
-      ["קרמיין", "מחזור בסיסי לפיתוח יציבות רצונית וצפיפות פיזית. טכניקות נשימה וכוח ייחודיות.", assets.mosheWushu, "course-kremen"],
-      ["קרמיין H2", "מחזור מתקדם לחיזוק הכוח הפנימי והיציבות. למתרגלים עם ותק.", assets.imgPillar, "course-kremen-h2"],
-      ["סנסיטיב — בריאות המוח", "אימון רגישות, ריכוז ופלסטיות עצבית. תרגילי נשימה וקשב.", assets.imgBrain, "course-sensitiv"],
+      ["קרמיין רמה 1", "מחזור בסיסי לפיתוח יציבות רצונית וצפיפות פיזית. טכניקות נשימה וכוח ייחודיות.", assets.imgMartialAsian, "course-kremen"],
+      ["קרמיין רמה 2", "מחזור מתקדם לחיזוק הכוח הפנימי והיציבות. למתרגלים עם ותק.", assets.imgMartialWarrior, "course-kremen-h2"],
+      ["סנסיטיב — בריאות המוח", "אימון רגישות, ריכוז ופלסטיות עצבית. תרגילי נשימה וקשב.", assets.imgBrain2, "course-sensitiv"],
     ],
     marathon: [
       ["צ'י-גונג דאואיסטי קשיח", "תרגול אינטנסיבי לחיזוק הגוף והמבנה דרך שיטות דאואיסטיות. העבודה מכוונת לאיסוף, יציבות פיזית וחיזוק המערכת האנרגטית הבסיסית.", assets.mosheWushu, "marathon-hard-qigong"],
@@ -832,7 +837,7 @@ const he = {
     retreat: [
       ["ויפאסנה טוריה (גישה טיבטית)", "מאונה, יוגה של חלומות מודעים, מדיטציות הצופה. מודעות לאורך 24 שעות ביממה.", assets.imgVipassana, "retreat-vipassana-turiya"],
       ["ריטריט צ'י-גונג דאואיסטי", "מתרגולים עדינים לאינטנסיביים. כוח חיים, מערכת עצבים, איזון רגשי.", assets.imgDaoist, "retreat-daoist"],
-      ["ריטריט אישי של משה", "פורמט אינטימי של עבודה עמוקה אחד-על-אחד בקבוצה. לפי בקשות אישיות.", assets.mosheBowl, "retreat-signature"],
+      ["ריטריט אישי של משה", "פורמט אינטימי של עבודה עמוקה אחד-על-אחד בקבוצה. לפי בקשות אישיות.", assets.mosheRetreat, "retreat-signature"],
     ],
   },
   traditions: [
@@ -1301,11 +1306,11 @@ const en = {
     courses: [
       ["Qigong of Life Force", "Ancient Chinese practice for energy harmony: breath, meditation, soft movement.", assets.imgQigong, "course-qigong"],
       ["ZDRAVOTEL", "Daoist practice for experienced practitioners. Inner strength and energy balance.", assets.imgDaoist, "course-zdravotel"],
-      ["Tree of Perfection", "Focus, inner strength, awakening of spirit. Sustained harmony in life.", assets.imgElements, "course-derevo"],
+      ["Tree of Perfection", "Focus, inner strength, awakening of spirit. Sustained harmony in life.", assets.imgTree, "course-derevo"],
       ["Iron Shirt", "Inner stability and body density through breath and pointed tension. Advanced level — after Qigong of Life Force.", assets.mosheWushu, "course-iron-shirt"],
-      ["Kremen (Flint)", "Base cycle of willful resilience and physical density. Specialized breath and strength techniques.", assets.mosheWushu, "course-kremen"],
-      ["Kremen H2", "Advanced cycle for strengthening inner force and stability. For experienced practitioners.", assets.imgPillar, "course-kremen-h2"],
-      ["Sensitiv — Brain Health", "Training sensitivity, focus, and neuroplasticity. Breath techniques and attention exercises.", assets.imgBrain, "course-sensitiv"],
+      ["Kremen Level 1", "Base cycle of willful resilience and physical density. Specialized breath and strength techniques.", assets.imgMartialAsian, "course-kremen"],
+      ["Kremen Level 2", "Advanced cycle for strengthening inner force and stability. For experienced practitioners.", assets.imgMartialWarrior, "course-kremen-h2"],
+      ["Sensitiv — Brain Health", "Training sensitivity, focus, and neuroplasticity. Breath techniques and attention exercises.", assets.imgBrain2, "course-sensitiv"],
     ],
     marathon: [
       ["Hard Daoist Qigong", "Intensive practice strengthening body and structure via Daoist methods. Focus on collection, physical resilience, and base energy.", assets.mosheWushu, "marathon-hard-qigong"],
@@ -1318,7 +1323,7 @@ const en = {
     retreat: [
       ["Vipassana Turiya (Tibetan approach)", "Mauna, lucid-dreaming yoga, observer meditations. 24-hour awareness.", assets.imgVipassana, "retreat-vipassana-turiya"],
       ["Daoist Qigong Retreat", "From soft practices to intensive Daoist techniques. Life force, nervous system, emotional balance.", assets.imgDaoist, "retreat-daoist"],
-      ["Moshe's signature retreat", "Intimate format of deep one-on-one work within a small group. Tailored to participant requests.", assets.mosheBowl, "retreat-signature"],
+      ["Moshe's signature retreat", "Intimate format of deep one-on-one work within a small group. Tailored to participant requests.", assets.mosheRetreat, "retreat-signature"],
     ],
   },
   traditions: [
