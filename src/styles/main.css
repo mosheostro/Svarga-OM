@@ -395,20 +395,17 @@ body.has-menu-open .drawer {
   background: var(--bg-muted);
   overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-top: 90px;
-  padding-bottom: 2rem;
 }
 
 .drawer-image img {
-  width: 100%;
-  height: 100%;
+  width: 88%;
+  height: calc(100% - 160px);
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center center;
   position: absolute;
-  inset: 90px 0 0;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .drawer-watermark {
