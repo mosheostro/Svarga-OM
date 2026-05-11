@@ -373,6 +373,10 @@ export function contactPage(copy) {
             <li><a href="${copy.contacts.telegram}" target="_blank" rel="noreferrer">Telegram</a></li>
             <li><a href="${copy.contacts.instagram}" target="_blank" rel="noreferrer">Instagram</a></li>
             <li><a href="${copy.contacts.youtube}" target="_blank" rel="noreferrer">YouTube</a></li>
+            <li><a href="${copy.contacts.tiktok}" target="_blank" rel="noreferrer">TikTok</a></li>
+            <li><a href="${copy.contacts.facebook}" target="_blank" rel="noreferrer">Facebook</a></li>
+            <li><a href="${copy.contacts.site}" target="_blank" rel="noreferrer">${copy.siteLabel}</a></li>
+            <li><a href="${digitalCardFor(copy)}" target="_blank" rel="noreferrer">${copy.digitalCard}</a></li>
           </ul>
         </section>
         <form class="contact-form reveal" data-contact-form novalidate>
@@ -502,6 +506,11 @@ function programCard(copy, title, text, image, link = "contact") {
       </div>
     </article>
   `;
+}
+
+function digitalCardFor(copy) {
+  if (copy.code === "he") return copy.contacts.digitalCardHe;
+  return copy.contacts.digitalCardRu;
 }
 
 function imageFor(id) {

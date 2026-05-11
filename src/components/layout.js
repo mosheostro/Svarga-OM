@@ -44,6 +44,8 @@ export function shell(copy, route) {
         <div class="drawer-social">
           <a href="${copy.contacts.instagram}" target="_blank" rel="noreferrer">Instagram</a>
           <a href="${copy.contacts.youtube}" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="${copy.contacts.tiktok}" target="_blank" rel="noreferrer">TikTok</a>
+          <a href="${copy.contacts.facebook}" target="_blank" rel="noreferrer">Facebook</a>
           <a href="${copy.contacts.whatsapp}" target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="${copy.contacts.telegram}" target="_blank" rel="noreferrer">Telegram</a>
         </div>

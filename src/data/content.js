@@ -32,11 +32,15 @@ const contacts = {
   email: "Moshe@svarga-om.com",
   phone: "054-5715095",
   phoneHref: "+972545715095",
-  instagram: "https://www.instagram.com/mosheostrovski",
+  site: "https://www.svarga-om.com",
+  instagram: "https://www.instagram.com/mosheostrovsky/",
   youtube: "https://www.youtube.com/@MosheOstrovsky",
-  facebook: "https://www.facebook.com/share/15oRwf6uU6/?mibextid=wwXIfr",
-  whatsapp: "https://wa.me/972549989627",
-  telegram: "https://t.me/+uhh9AOCfQokyYWJi",
+  tiktok: "https://www.tiktok.com/@moshe.svarga.om",
+  facebook: "https://www.facebook.com/mosheostrovsky",
+  whatsapp: "https://wa.me/972545715095",
+  telegram: "https://t.me/+2Vk8kbR_70kyN2Qy",
+  digitalCardRu: "https://get-marketing.net/moshe-om/",
+  digitalCardHe: "https://get-marketing.co.il/moshe-om/",
 };
 
 function baseData() {
@@ -82,6 +86,8 @@ const ru = {
   message: "Сообщение",
   formDemo: "Заполните форму — мы свяжемся в течение рабочего дня.",
   formSuccess: "Спасибо! Сообщение получено. Мы свяжемся в ближайшее время.",
+  digitalCard: "Цифровая визитка",
+  siteLabel: "Сайт",
   menu: [
     ["home", "Главная"],
     ["master", "О мастере"],
@@ -437,6 +443,8 @@ const he = {
   message: "הודעה",
   formDemo: "השאירו פרטים — נחזור אליכם תוך יום עסקים.",
   formSuccess: "תודה! ההודעה התקבלה. נחזור אליכם בהקדם.",
+  digitalCard: "כרטיס דיגיטלי",
+  siteLabel: "אתר",
   menu: [
     ["home", "עמוד הבית"],
     ["master", "על המאסטר"],
@@ -772,6 +780,8 @@ const en = {
   account: "Account",
   formDemo: "Send a message — we reply within one business day.",
   formSuccess: "Thank you. Message received — we will be in touch shortly.",
+  digitalCard: "Digital card",
+  siteLabel: "Website",
   menu: [
     ["home", "Home"],
     ["master", "About Master"],
@@ -1074,6 +1084,8 @@ const de = {
   message: "Nachricht",
   formDemo: "Schreiben Sie uns — Antwort innerhalb eines Werktags.",
   formSuccess: "Danke. Ihre Nachricht ist angekommen — wir melden uns kurzfristig.",
+  digitalCard: "Digitale Karte",
+  siteLabel: "Website",
   menu: [
     ["home", "Startseite"],
     ["master", "Über den Master"],
