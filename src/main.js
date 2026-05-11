@@ -1,6 +1,6 @@
 import { dictionary, routes } from "./data/content.js";
 import { shell } from "./components/layout.js";
-import { articlePage, blogPage, contactPage, faqPage, homePage, programPage, simplePage } from "./components/pages.js";
+import { articlePage, blogPage, contactPage, faqPage, homePage, masterPage, practicePage, programPage, simplePage, svargaPage, testimonialsPage } from "./components/pages.js";
 import "./styles/main.css";
 
 const app = document.querySelector("#app");
@@ -67,6 +67,7 @@ function render() {
   document.documentElement.lang = lang;
   document.documentElement.dir = content.dir;
   document.title = `${content.pages[route]?.title || "Svarga"} | Svarga International`;
+  document.body.classList.remove("has-menu-open");
   app.innerHTML = shell(content, route);
   renderMain(route, content);
   applyTheme(content);
@@ -81,10 +82,14 @@ function renderMain(route, content) {
 
   if (post) main.innerHTML = articlePage(content, post);
   else if (route === "home" || !routes.includes(route)) main.innerHTML = homePage(content);
+  else if (route === "master") main.innerHTML = masterPage(content);
+  else if (route === "svarga") main.innerHTML = svargaPage(content);
   else if (["courses", "marathon", "retreat"].includes(route)) main.innerHTML = programPage(content, route);
   else if (route === "blog") main.innerHTML = blogPage(content);
   else if (route === "faq") main.innerHTML = faqPage(content);
   else if (route === "contact") main.innerHTML = contactPage(content);
+  else if (route === "testimonials") main.innerHTML = testimonialsPage(content);
+  else if (route === "practice") main.innerHTML = practicePage(content);
   else main.innerHTML = simplePage(content, route);
 
   main.focus({ preventScroll: true });
