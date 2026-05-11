@@ -137,6 +137,7 @@ const ru = {
     craft: "Сделано с заботой о практикующих.",
     primary: [
       ["courses", "Курсы"],
+      ["marathon", "Марафоны"],
       ["retreat", "Ретриты"],
       ["blog", "Блог"],
       ["testimonials", "Отзывы"],
@@ -683,6 +684,7 @@ const he = {
     craft: "נבנה בקפידה למתרגלים מחויבים.",
     primary: [
       ["courses", "קורסים"],
+      ["marathon", "מרתונים"],
       ["retreat", "ריטריטים"],
       ["blog", "בלוג"],
       ["testimonials", "המלצות"],
@@ -1209,6 +1211,7 @@ const en = {
     craft: "Crafted for committed practitioners.",
     primary: [
       ["courses", "Courses"],
+      ["marathon", "Marathons"],
       ["retreat", "Retreats"],
       ["blog", "Blog"],
       ["testimonials", "Reviews"],
@@ -1520,6 +1523,7 @@ const de = {
     secondaryTitle: "Service & Recht",
     primary: [
       ["courses", "Kurse"],
+      ["marathon", "Marathons"],
       ["retreat", "Retreats"],
       ["blog", "Blog"],
       ["testimonials", "Stimmen"],
