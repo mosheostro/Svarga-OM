@@ -126,7 +126,7 @@ export function masterPage(copy) {
           <p>${bio.intro || ""}</p>
           ${(bio.paragraphs || []).map((p) => `<p>${p}</p>`).join("")}
         </div>
-        <figure class="image-frame reveal"><img src="${assets.mosheMenu}" alt="Moshe Ostrovski" /></figure>
+        <figure class="image-frame reveal"><img src="${assets.mosheBowl}" alt="Moshe Ostrovski" /></figure>
       </div>
     </section>
     ${traditions.length ? `
@@ -258,7 +258,7 @@ export function programPage(copy, id) {
     <section class="section ${notice ? "compact-top" : ""}">
       <div class="container">
         <div class="cards-grid">
-          ${cards.map(([title, text], index) => programCard(copy, title, text, [assets.movement, assets.blog, assets.practice][index % 3])).join("")}
+          ${cards.map(([title, text, image], index) => programCard(copy, title, text, image || [assets.movement, assets.blog, assets.practice][index % 3])).join("")}
         </div>
       </div>
     </section>
@@ -418,8 +418,27 @@ export function testimonialsPage(copy) {
 
 export function practicePage(copy) {
   const blocks = copy.practiceBlocks || [];
+  const poseCaps = copy.poseCaptions || ["Дыхание", "Раскрытие", "Внутренняя сила"];
   return `
     ${pageHero(copy.pages.practice)}
+    <section class="section compact-top">
+      <div class="container">
+        <div class="poses-strip reveal">
+          <figure class="pose-figure">
+            <div class="pose-frame"><img src="${assets.mosheBowl}" alt="" /></div>
+            <figcaption>${poseCaps[0]}</figcaption>
+          </figure>
+          <figure class="pose-figure">
+            <div class="pose-frame"><img src="${assets.mosheShoulder}" alt="" /></div>
+            <figcaption>${poseCaps[1]}</figcaption>
+          </figure>
+          <figure class="pose-figure">
+            <div class="pose-frame"><img src="${assets.mosheWushu}" alt="" /></div>
+            <figcaption>${poseCaps[2]}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
         <div class="practice-blocks">
