@@ -33,6 +33,7 @@ export const assets = {
   imgMartialAsian: "/assets/p-17.jpg",
   imgMartialWarrior: "/assets/p-23.jpg",
   mosheRetreat: "/assets/p-29.jpg",
+  mosheLotusGarden: "/assets/p-30.jpg",
   retreatVipassanaScene: "/assets/retreat-vipassana-img.png",
   retreatChigongScene: "/assets/retreat-chigong.png",
   retreatForestCircle: "/assets/retreat-3.png",

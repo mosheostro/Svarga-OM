@@ -608,7 +608,8 @@ function digitalCardFor(copy) {
 }
 
 function imageFor(id) {
-  if (["master", "testimonials", "account"].includes(id)) return assets.mosheHero;
+  if (id === "account") return assets.mosheLotusGarden;
+  if (["master", "testimonials"].includes(id)) return assets.mosheHero;
   if (["svarga", "practice", "events"].includes(id)) return assets.movement;
   return assets.blog;
 }
