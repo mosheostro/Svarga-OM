@@ -34,7 +34,7 @@ export function homePage(copy) {
           </div>
         </div>
         <div class="hero-portrait">
-          <img src="${assets.mosheHero}" alt="Moshe Ostrovski" />
+          <img src="${assets.mosheHero}" alt="Moshe Ostrovsky" />
         </div>
         <div class="hero-side end">
           <h1>${page.title}</h1>
@@ -126,7 +126,7 @@ export function masterPage(copy) {
           <p>${bio.intro || ""}</p>
           ${(bio.paragraphs || []).map((p) => `<p>${p}</p>`).join("")}
         </div>
-        <figure class="image-frame master-portrait reveal"><img src="${assets.moshePortrait}" alt="Moshe Ostrovski" onerror="this.onerror=null;this.src='${assets.mosheBowl}';" /></figure>
+        <figure class="image-frame master-portrait reveal"><img src="${assets.moshePortrait}" alt="Moshe Ostrovsky" onerror="this.onerror=null;this.src='${assets.mosheBowl}';" /></figure>
       </div>
     </section>
     ${traditions.length ? `
