@@ -539,12 +539,13 @@ function findCardBySlug(copy, slug) {
 export function simplePage(copy, id) {
   const page = copy.pages[id] || copy.pages.home;
   const paragraphs = copy.simpleBodies[id] || [page.lead];
+  const frameMod = id === "account" ? "image-frame-portrait" : "";
   return `
     ${pageHero(page)}
     <section class="section">
       <div class="container media-split simple-layout">
         <div class="text-stack reveal">${paragraphs.map((text) => `<p>${text}</p>`).join("")}</div>
-        <figure class="image-frame reveal"><img src="${imageFor(id)}" alt="" /></figure>
+        <figure class="image-frame ${frameMod} reveal"><img src="${imageFor(id)}" alt="" /></figure>
       </div>
     </section>
   `;

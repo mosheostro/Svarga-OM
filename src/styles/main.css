@@ -746,6 +746,16 @@ body.has-menu-open .drawer {
   object-position: center 22%;
 }
 
+.image-frame-portrait {
+  background: var(--bg-muted);
+}
+
+.image-frame-portrait img {
+  aspect-ratio: 0.72;
+  object-fit: contain;
+  object-position: center center;
+}
+
 .image-frame:hover img {
   transform: scale(1.04);
 }
