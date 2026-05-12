@@ -151,32 +151,128 @@ function bindChrome(content) {
 
   const form = document.querySelector("[data-contact-form]");
   if (form) {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const name = (data.get("name") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-      const phone = (data.get("phone") || "").toString().trim();
-      const message = (data.get("message") || "").toString().trim();
-      const subject = `[Svarga] ${content.pages.contact.title} — ${name || "сайт"}`;
-      const body = [
-        `${content.name}: ${name}`,
-        `${content.emailLabel}: ${email}`,
-        `${content.phone}: ${phone}`,
-        "",
-        `${content.message}:`,
-        message,
-      ].join("\n");
-      const mailto = `mailto:${content.contacts.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-      const status = form.querySelector("[data-form-status]");
-      if (status) {
-        status.classList.add("is-active");
-        status.textContent = content.formSuccess || content.formDemo;
-      }
-      form.reset();
-    });
+    initContactForm(form, content);
   }
+}
+
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || "";
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "";
+let recaptchaScriptLoaded = false;
+let recaptchaWidgetId = null;
+
+function loadRecaptcha(mount) {
+  if (!RECAPTCHA_SITE_KEY || !mount) return;
+  const renderWidget = () => {
+    if (!window.grecaptcha || recaptchaWidgetId !== null) return;
+    recaptchaWidgetId = window.grecaptcha.render(mount, { sitekey: RECAPTCHA_SITE_KEY });
+  };
+  if (window.grecaptcha && window.grecaptcha.render) {
+    renderWidget();
+    return;
+  }
+  window.onRecaptchaLoad = renderWidget;
+  if (recaptchaScriptLoaded) return;
+  recaptchaScriptLoaded = true;
+  const script = document.createElement("script");
+  script.src = "https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit";
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+}
+
+function setFormStatus(form, content, kind, message) {
+  const status = form.querySelector("[data-form-status]");
+  if (!status) return;
+  status.classList.remove("is-active", "is-error");
+  if (kind === "success") status.classList.add("is-active");
+  if (kind === "error") status.classList.add("is-error");
+  status.textContent = message || content.formDemo;
+}
+
+function initContactForm(form, content) {
+  const mount = form.querySelector("[data-recaptcha]");
+  loadRecaptcha(mount);
+  recaptchaWidgetId = null;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get("name") || "").toString().trim();
+    const email = (data.get("email") || "").toString().trim();
+    const phone = (data.get("phone") || "").toString().trim();
+    const message = (data.get("message") || "").toString().trim();
+    const notRobot = form.querySelector('input[name="not_a_robot"]')?.checked;
+
+    if (!name || !email || !phone || !message) {
+      setFormStatus(form, content, "error", content.fieldRequired);
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setFormStatus(form, content, "error", content.emailInvalid);
+      return;
+    }
+    if (!notRobot) {
+      setFormStatus(form, content, "error", content.robotRequired);
+      return;
+    }
+    let recaptchaToken = "";
+    if (RECAPTCHA_SITE_KEY && window.grecaptcha) {
+      recaptchaToken = window.grecaptcha.getResponse(recaptchaWidgetId ?? undefined);
+      if (!recaptchaToken) {
+        setFormStatus(form, content, "error", content.robotRequired);
+        return;
+      }
+    }
+    if (!WEB3FORMS_KEY) {
+      setFormStatus(form, content, "error", content.formNotConfigured);
+      return;
+    }
+
+    const submitButton = form.querySelector("[data-submit-button]");
+    const originalLabel = submitButton ? submitButton.textContent : "";
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = content.sending;
+    }
+    setFormStatus(form, content, "info", content.sending);
+
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: `[Svarga] Contact form — ${name}`,
+      from_name: name,
+      email,
+      phone,
+      message,
+      replyto: email,
+      botcheck: data.get("botcheck") || "",
+    };
+    if (recaptchaToken) payload["g-recaptcha-response"] = recaptchaToken;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && result.success !== false) {
+        setFormStatus(form, content, "success", content.formSuccess || content.formDemo);
+        form.reset();
+        if (RECAPTCHA_SITE_KEY && window.grecaptcha && recaptchaWidgetId !== null) {
+          window.grecaptcha.reset(recaptchaWidgetId);
+        }
+      } else {
+        setFormStatus(form, content, "error", result.message || content.formError);
+      }
+    } catch (err) {
+      setFormStatus(form, content, "error", content.formError);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
+  });
 }
 
 window.addEventListener("hashchange", () => {

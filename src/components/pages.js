@@ -385,7 +385,10 @@ export function contactPage(copy) {
           <label>${copy.emailLabel}<input name="email" type="email" autocomplete="email" required /></label>
           <label>${copy.phone}<input name="phone" autocomplete="tel" required /></label>
           <label>${copy.message}<textarea name="message" required></textarea></label>
-          <button class="pill-button primary" type="submit">${copy.send}</button>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form-recaptcha" data-recaptcha></div>
+          <label class="form-checkbox"><input type="checkbox" name="not_a_robot" required /> <span>${copy.robotCheck}</span></label>
+          <button class="pill-button primary" type="submit" data-submit-button>${copy.send}</button>
         </form>
       </div>
     </section>
