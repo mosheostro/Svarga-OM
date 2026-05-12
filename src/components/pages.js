@@ -382,6 +382,7 @@ export function contactPage(copy) {
         <form class="contact-form reveal" data-contact-form novalidate>
           <div class="form-status" data-form-status role="status" aria-live="polite">${copy.formDemo}</div>
           <label>${copy.name}<input name="name" autocomplete="name" required /></label>
+          <label>${copy.emailLabel}<input name="email" type="email" autocomplete="email" required /></label>
           <label>${copy.phone}<input name="phone" autocomplete="tel" required /></label>
           <label>${copy.message}<textarea name="message" required></textarea></label>
           <button class="pill-button primary" type="submit">${copy.send}</button>

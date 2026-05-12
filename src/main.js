@@ -153,6 +153,22 @@ function bindChrome(content) {
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get("name") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const phone = (data.get("phone") || "").toString().trim();
+      const message = (data.get("message") || "").toString().trim();
+      const subject = `[Svarga] ${content.pages.contact.title} — ${name || "сайт"}`;
+      const body = [
+        `${content.name}: ${name}`,
+        `${content.emailLabel}: ${email}`,
+        `${content.phone}: ${phone}`,
+        "",
+        `${content.message}:`,
+        message,
+      ].join("\n");
+      const mailto = `mailto:${content.contacts.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       const status = form.querySelector("[data-form-status]");
       if (status) {
         status.classList.add("is-active");
