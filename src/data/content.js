@@ -33,6 +33,14 @@ export const assets = {
   imgMartialAsian: "/assets/p-17.jpg",
   imgMartialWarrior: "/assets/p-23.jpg",
   mosheRetreat: "/assets/p-29.jpg",
+  retreatVipassanaScene: "/assets/retreat-vipassana-img.png",
+  retreatChigongScene: "/assets/retreat-chigong.png",
+  retreatForestCircle: "/assets/retreat-3.png",
+  retreatTemple: "/assets/retreat-4.png",
+  retreatPavilion: "/assets/retreat-5.png",
+  certLinChi: "/assets/cert-1.jpg",
+  certIronShirt: "/assets/cert-2.jpg",
+  certSvarga: "/assets/cert-3.jpg",
 };
 
 export const routes = [
@@ -290,9 +298,9 @@ const ru = {
       ["Даосский цигун", "Подготовительный мягкий цикл для тех, кто только входит в практику. Постепенное укрепление тела и стабилизация дыхания.", assets.imgDaoist, "marathon-daoist-soft"],
     ],
     retreat: [
-      ["Випассана Турия (тибетский подход)", "Мауна, йога осознанных сновидений, медитации наблюдателя. 24-часовая осознанность.", assets.imgVipassana, "retreat-vipassana-turiya"],
-      ["Даосский цигун — ретрит", "От мягких практик к интенсивным даосским техникам. Жизненная сила, нервная система, эмоциональный баланс.", assets.imgDaoist, "retreat-daoist"],
-      ["Авторский ретрит Моше", "Камерный формат глубокой работы один-на-один с группой. Под индивидуальные запросы участников.", assets.mosheRetreat, "retreat-signature"],
+      ["Випассана Турия (тибетский подход)", "Мауна, йога осознанных сновидений, медитации наблюдателя. 24-часовая осознанность.", assets.retreatVipassanaScene, "retreat-vipassana-turiya"],
+      ["Даосский цигун — ретрит", "От мягких практик к интенсивным даосским техникам. Жизненная сила, нервная система, эмоциональный баланс.", assets.retreatChigongScene, "retreat-daoist"],
+      ["Авторский ретрит Моше", "Камерный формат глубокой работы один-на-один с группой. Под индивидуальные запросы участников.", assets.retreatForestCircle, "retreat-signature"],
     ],
   },
   traditions: [
@@ -313,9 +321,9 @@ const ru = {
     "Гармония и долголетие через активацию процессов омоложения тела и души.",
   ],
   certifications: [
-    ["Цигун каналов и точек Лин Чи", "Профессиональное обучение под руководством мастера Шэнь Чжи и Дмитрия Лапшинова. Сертификат системы Svarga."],
-    ["Инструктор системы Сварга — 1 уровень", "Диплом о профессиональной подготовке по системе Сварга. Центр «Профи-Трейнинг», Российская Федерация."],
-    ["«Железная рубашка» (Iron Shirt)", "Аттестация и сертификация по практике «Железная рубашка» в рамках системы Svarga. Руководители: Дмитрий Лапшинов и Шэнь Чжи."],
+    ["Цигун каналов и точек Лин Чи", "Даосская методология открытия каналов и точек. Профессиональное обучение под руководством мастера Шэнь Чжи и Дмитрия Лапшинова — основа безопасной работы с энергией в авторских программах.", assets.certLinChi],
+    ["Инструктор системы Сварга — 1 уровень", "Сертифицированный преподаватель системы Сварга. Диплом профессиональной подготовки от центра «Профи-Трейнинг», Российская Федерация — право вести курсы по полной программе метода.", assets.certSvarga],
+    ["«Железная рубашка» (Iron Shirt)", "Аттестация и сертификация по практике «Железная рубашка» в рамках системы Svarga. Руководители: Дмитрий Лапшинов и Шэнь Чжи — допуск к ведению силовых протоколов закаливания тела.", assets.certIronShirt],
   ],
   retreatPrograms: [
     {
@@ -837,9 +845,9 @@ const he = {
       ["צ'י-גונג דאואיסטי", "מחזור הכנה רך למי שרק נכנס לתרגול. חיזוק הדרגתי של הגוף וייצוב הנשימה.", assets.imgDaoist, "marathon-daoist-soft"],
     ],
     retreat: [
-      ["ויפאסנה טוריה (גישה טיבטית)", "מאונה, יוגה של חלומות מודעים, מדיטציות הצופה. מודעות לאורך 24 שעות ביממה.", assets.imgVipassana, "retreat-vipassana-turiya"],
-      ["ריטריט צ'י-גונג דאואיסטי", "מתרגולים עדינים לאינטנסיביים. כוח חיים, מערכת עצבים, איזון רגשי.", assets.imgDaoist, "retreat-daoist"],
-      ["ריטריט אישי של משה", "פורמט אינטימי של עבודה עמוקה אחד-על-אחד בקבוצה. לפי בקשות אישיות.", assets.mosheRetreat, "retreat-signature"],
+      ["ויפאסנה טוריה (גישה טיבטית)", "מאונה, יוגה של חלומות מודעים, מדיטציות הצופה. מודעות לאורך 24 שעות ביממה.", assets.retreatVipassanaScene, "retreat-vipassana-turiya"],
+      ["ריטריט צ'י-גונג דאואיסטי", "מתרגולים עדינים לאינטנסיביים. כוח חיים, מערכת עצבים, איזון רגשי.", assets.retreatChigongScene, "retreat-daoist"],
+      ["ריטריט אישי של משה", "פורמט אינטימי של עבודה עמוקה אחד-על-אחד בקבוצה. לפי בקשות אישיות.", assets.retreatForestCircle, "retreat-signature"],
     ],
   },
   traditions: [
@@ -860,9 +868,9 @@ const he = {
     "הרמוניה ואריכות ימים דרך הפעלת תהליכי התחדשות בגוף ובנפש.",
   ],
   certifications: [
-    ["צ'י-גונג ערוצים ונקודות לין צ'י", "הכשרה מקצועית בהנחיית המאסטרים שן ג'י ודמיטרי לפשינוב. תעודת הסמכה של מערכת סוורגה."],
-    ["מדריך מערכת סוורגה — רמה 1", "תעודה מקצועית של מערכת סוורגה. מרכז «פרופי-טריינינג», הפדרציה הרוסית."],
-    ["«חולצת הברזל» (Iron Shirt)", "אטסטציה והסמכה בתרגול «חולצת הברזל» במסגרת מערכת סוורגה. מנחים: דמיטרי לפשינוב ושן ג'י."],
+    ["צ'י-גונג ערוצים ונקודות לין צ'י", "מתודולוגיה דאואיסטית של פתיחת ערוצים ונקודות. הכשרה מקצועית בהנחיית המאסטרים שן ג'י ודמיטרי לפשינוב — בסיס לעבודה בטוחה עם אנרגיה בתוכניות.", assets.certLinChi],
+    ["מדריך מערכת סוורגה — רמה 1", "מורה מוסמך של מערכת סוורגה. תעודה מקצועית של מרכז «פרופי-טריינינג», הפדרציה הרוסית — אישור להעביר את הקורסים של השיטה.", assets.certSvarga],
+    ["«חולצת הברזל» (Iron Shirt)", "אטסטציה והסמכה בתרגול «חולצת הברזל» במסגרת מערכת סוורגה. מנחים: דמיטרי לפשינוב ושן ג'י — אישור להוביל פרוטוקולי חיזוק הגוף.", assets.certIronShirt],
   ],
   retreatPrograms: [
     {
@@ -1324,9 +1332,9 @@ const en = {
       ["Daoist Qigong (Soft)", "Soft preparatory cycle for newcomers. Gradual body strengthening and breath stabilization.", assets.imgDaoist, "marathon-daoist-soft"],
     ],
     retreat: [
-      ["Vipassana Turiya (Tibetan approach)", "Mauna, lucid-dreaming yoga, observer meditations. 24-hour awareness.", assets.imgVipassana, "retreat-vipassana-turiya"],
-      ["Daoist Qigong Retreat", "From soft practices to intensive Daoist techniques. Life force, nervous system, emotional balance.", assets.imgDaoist, "retreat-daoist"],
-      ["Moshe's signature retreat", "Intimate format of deep one-on-one work within a small group. Tailored to participant requests.", assets.mosheRetreat, "retreat-signature"],
+      ["Vipassana Turiya (Tibetan approach)", "Mauna, lucid-dreaming yoga, observer meditations. 24-hour awareness.", assets.retreatVipassanaScene, "retreat-vipassana-turiya"],
+      ["Daoist Qigong Retreat", "From soft practices to intensive Daoist techniques. Life force, nervous system, emotional balance.", assets.retreatChigongScene, "retreat-daoist"],
+      ["Moshe's signature retreat", "Intimate format of deep one-on-one work within a small group. Tailored to participant requests.", assets.retreatForestCircle, "retreat-signature"],
     ],
   },
   traditions: [
@@ -1347,9 +1355,9 @@ const en = {
     "Harmony and longevity through activation of renewal in body and spirit.",
   ],
   certifications: [
-    ["Qigong of Channels and Points Ling Chi", "Professional training under masters Shen Zhi and Dmitri Lapshinov. Svarga system certificate."],
-    ["Svarga Instructor — Level 1", "Professional training diploma. «Profi-Training» center, Russian Federation."],
-    ["Iron Shirt", "Successful attestation and certification in Iron Shirt practice within the Svarga system. Instructors: Dmitri Lapshinov and Shen Zhi."],
+    ["Qigong of Channels and Points Ling Chi", "Daoist methodology of channel and point opening. Professional training under masters Shen Zhi and Dmitri Lapshinov — the foundation for safe energy work in author programs.", assets.certLinChi],
+    ["Svarga Instructor — Level 1", "Certified teacher of the Svarga system. Professional training diploma from the «Profi-Training» center, Russian Federation — authorization to lead full method courses.", assets.certSvarga],
+    ["Iron Shirt", "Successful attestation and certification in Iron Shirt practice within the Svarga system. Instructors: Dmitri Lapshinov and Shen Zhi — approval to lead body-strengthening protocols.", assets.certIronShirt],
   ],
   retreatPrograms: [
     {

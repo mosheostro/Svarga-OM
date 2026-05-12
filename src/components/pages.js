@@ -177,9 +177,9 @@ export function masterPage(copy) {
           <h2>${copy.ui.certsLabel}</h2>
         </div>
         <div class="cert-grid">
-          ${certs.map(([title, body]) => `
+          ${certs.map(([title, body, image]) => `
             <article class="cert-card reveal">
-              <div class="cert-seal" aria-hidden="true">✦</div>
+              ${image ? `<div class="cert-image"><img src="${image}" alt="${title}" loading="lazy" /></div>` : `<div class="cert-seal" aria-hidden="true">✦</div>`}
               <h3>${title}</h3>
               <p>${body}</p>
             </article>
