@@ -155,7 +155,6 @@ function bindChrome(content) {
   }
 }
 
-const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || "";
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "";
 let recaptchaScriptLoaded = false;
 let recaptchaWidgetId = null;
@@ -223,11 +222,6 @@ function initContactForm(form, content) {
         return;
       }
     }
-    if (!WEB3FORMS_KEY) {
-      setFormStatus(form, content, "error", content.formNotConfigured);
-      return;
-    }
-
     const submitButton = form.querySelector("[data-submit-button]");
     const originalLabel = submitButton ? submitButton.textContent : "";
     if (submitButton) {
@@ -237,25 +231,29 @@ function initContactForm(form, content) {
     setFormStatus(form, content, "info", content.sending);
 
     const payload = {
-      access_key: WEB3FORMS_KEY,
-      subject: `[Svarga] Contact form — ${name}`,
-      from_name: name,
+      name,
       email,
       phone,
       message,
-      replyto: email,
-      botcheck: data.get("botcheck") || "",
+      _subject: `[Svarga] Contact form — ${name}`,
+      _replyto: email,
+      _template: "table",
+      _captcha: "false",
+      _honey: data.get("botcheck") || "",
     };
     if (recaptchaToken) payload["g-recaptcha-response"] = recaptchaToken;
 
+    const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(content.contacts.email)}`;
+
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
       const result = await response.json().catch(() => ({}));
-      if (response.ok && result.success !== false) {
+      const ok = response.ok && (result.success === "true" || result.success === true || result.message);
+      if (ok) {
         setFormStatus(form, content, "success", content.formSuccess || content.formDemo);
         form.reset();
         if (RECAPTCHA_SITE_KEY && window.grecaptcha && recaptchaWidgetId !== null) {
