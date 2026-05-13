@@ -15,17 +15,20 @@
   --green-soft: rgba(47, 99, 83, 0.12);
   --gold: #d8b15a;
   --gold-soft: rgba(216, 177, 90, 0.18);
-  --line: rgba(20, 32, 22, 0.12);
-  --shadow-sm: 0 6px 18px rgba(20, 32, 22, 0.06);
-  --shadow-md: 0 16px 38px rgba(20, 32, 22, 0.09);
-  --shadow-lg: 0 30px 70px rgba(20, 32, 22, 0.14);
-  --radius-sm: 6px;
-  --radius: 14px;
-  --radius-lg: 22px;
+  --line: rgba(20, 32, 22, 0.09);
+  --line-strong: rgba(20, 32, 22, 0.16);
+  --shadow-sm: 0 4px 14px rgba(20, 32, 22, 0.04);
+  --shadow-md: 0 14px 36px rgba(20, 32, 22, 0.06);
+  --shadow-lg: 0 28px 64px rgba(20, 32, 22, 0.09);
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-lg: 24px;
   --container: 1200px;
+  --container-narrow: 880px;
   --font-body: "Inter", "Heebo", "Segoe UI", system-ui, sans-serif;
   --font-display: "Playfair Display", "Heebo", Georgia, serif;
-  --transition: 0.25s cubic-bezier(0.2, 0.7, 0.3, 1);
+  --transition: 0.32s cubic-bezier(0.2, 0.7, 0.3, 1);
+  --transition-slow: 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 [data-theme="dark"] {
@@ -41,10 +44,11 @@
   --green-soft: rgba(127, 191, 166, 0.16);
   --gold: #e6c478;
   --gold-soft: rgba(230, 196, 120, 0.18);
-  --line: rgba(240, 235, 217, 0.14);
-  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 16px 38px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.6);
+  --line: rgba(240, 235, 217, 0.1);
+  --line-strong: rgba(240, 235, 217, 0.18);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.32);
+  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 28px 64px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -131,48 +135,53 @@ h2,
 h3 {
   margin: 0;
   color: var(--ink);
-  line-height: 1.1;
+  line-height: 1.08;
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 h1 {
   font-size: clamp(2.6rem, 6vw, 5.2rem);
-  max-width: 14ch;
+  max-width: 16ch;
+  letter-spacing: -0.022em;
 }
 
 h2 {
   font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+  max-width: 22ch;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 1.6vw, 1.55rem);
+  font-size: clamp(1.2rem, 1.55vw, 1.5rem);
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.005em;
+  line-height: 1.25;
 }
 
 p {
   margin-block: 0;
+  text-wrap: pretty;
 }
 
 .eyebrow {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.85rem;
   color: var(--green);
   font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
 }
 
 .lead {
   max-width: 56ch;
-  margin-block-start: 1.2rem;
+  margin-block-start: 1.25rem;
   color: var(--muted);
   font-size: clamp(1.05rem, 1.3vw, 1.18rem);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 /* ---------- layout primitives ---------- */
@@ -693,7 +702,7 @@ body.has-menu-open .drawer {
 }
 
 .pill-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 
@@ -836,7 +845,11 @@ body.has-menu-open .drawer {
 
 .section-heading {
   max-width: 780px;
-  margin-block-end: 2.2rem;
+  margin-block-end: clamp(2.4rem, 4vw, 3.4rem);
+}
+
+.section-heading .lead {
+  margin-block-start: 1rem;
 }
 
 .pillars-grid,
@@ -908,20 +921,20 @@ body.has-menu-open .drawer {
 }
 
 .program-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  border-color: color-mix(in srgb, var(--green) 25%, var(--line));
 }
 
 .program-card img {
   width: 100%;
   aspect-ratio: 1.46;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform var(--transition-slow);
 }
 
 .program-card:hover img {
-  transform: scale(1.04);
+  transform: scale(1.025);
 }
 
 .program-card-body {
@@ -1076,7 +1089,7 @@ body.has-menu-open .drawer {
 }
 
 .testimonial-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
@@ -1170,9 +1183,9 @@ body.has-menu-open .drawer {
 }
 
 .article-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  border-color: color-mix(in srgb, var(--green) 22%, var(--line));
 }
 
 .article-card img {
@@ -1180,6 +1193,11 @@ body.has-menu-open .drawer {
   height: 100%;
   min-height: 240px;
   object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.article-card:hover img {
+  transform: scale(1.02);
 }
 
 .article-card > div {
@@ -1519,9 +1537,9 @@ body.has-menu-open .drawer {
 }
 
 .tradition-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: color-mix(in srgb, var(--green) 35%, var(--line));
+  border-color: color-mix(in srgb, var(--green) 22%, var(--line));
 }
 
 .tradition-index {
@@ -1990,8 +2008,8 @@ body.has-menu-open .drawer {
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(14px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 .reveal.is-visible {
