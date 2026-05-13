@@ -93,6 +93,37 @@ textarea {
   font: inherit;
 }
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--green-soft);
+  color: var(--ink);
+}
+
 /* ---------- typography ---------- */
 
 h1,
@@ -945,6 +976,14 @@ body.has-menu-open .drawer {
 
 .text-link:hover {
   color: var(--green-dark);
+}
+
+.text-link:hover::after {
+  transform: translate(4px, -52%);
+}
+
+[dir="rtl"] .text-link:hover::after {
+  transform: translate(-4px, -52%);
 }
 
 .text-link:hover::after {
