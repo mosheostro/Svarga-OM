@@ -626,6 +626,42 @@ const ru = {
   ],
   articles: [
     {
+      slug: "breath",
+      title: "Дыхание как инструмент саморегуляции",
+      excerpt: "Как дыхательная дисциплина снижает стресс и возвращает ясность мышления.",
+      image: assets.imgLotus,
+      body: [
+        "В моменты перегрузки дыхание становится поверхностным и рваным. Грудная клетка зажимается, диафрагма теряет амплитуду, а нервная система фиксируется в режиме тревоги. На этом фоне внимание становится дробным, а решения — реактивными.",
+        "Когда мы возвращаем осознанный ритм вдоха и выдоха, парасимпатический отдел получает сигнал безопасности. Сердечный ритм выравнивается, мышцы плеч и шеи отпускают напряжение, и появляется реальная пауза между раздражителем и реакцией.",
+        "В Svarga мы работаем с тремя базовыми протоколами: удлинённый выдох для быстрой стабилизации, циклическое дыхание для восстановления энергии и тихое наблюдение за дыханием для тренировки внимания. Каждый занимает 5–12 минут и встраивается в любой рабочий день.",
+        "Через 3–4 недели регулярной практики ученики отмечают стабильный сон, спокойствие в напряжённых разговорах и способность дольше удерживать сложные задачи без выгорания.",
+      ],
+    },
+    {
+      slug: "movement",
+      title: "Медленное движение и точная осанка",
+      excerpt: "Почему аккуратная телесная работа эффективнее, чем резкие нагрузки в состоянии стресса.",
+      image: assets.mosheGarden,
+      body: [
+        "При постоянной спешке тело работает из компенсаций: одни зоны перегружаются, другие выключаются из движения. Появляются стянутые плечи, тяжёлая поясница, поверхностное дыхание — и хроническая усталость, которую не снимает сон.",
+        "Резкая нагрузка в таком состоянии обычно усиливает компенсации, а не убирает их. Тело защищается от перегрузки, и пик усилий уходит не в развитие, а в новое напряжение.",
+        "Медленная и точная практика возвращает суставам естественную траекторию, мышцам — рабочий тонус, а позвоночнику — длину и опору. Отсюда растут устойчивость, энергия и чувство внутреннего контроля.",
+        "Минимальный регулярный объём — 20 минут в день. Этого достаточно, чтобы за месяц увидеть изменения в осанке, дыхании и качестве сна.",
+      ],
+    },
+    {
+      slug: "attention",
+      title: "Тренировка внимания в обычном дне",
+      excerpt: "Как переносить практику из зала в рабочий график, коммуникацию и принятие решений.",
+      image: assets.imgMeditation,
+      body: [
+        "Настоящий результат появляется не на коврике, а в повседневных ситуациях: переговорах, дедлайнах, сложных разговорах. Это уровень, на котором практика становится реальным конкурентным преимуществом.",
+        "Базовая тренировка внимания — это короткие циклы: 60–90 секунд осознанного присутствия, повторённые несколько раз в день. Не медитация на час, а навык быстрого возврата в фокус.",
+        "Через несколько недель исчезает привычка действовать на автопилоте. Появляется зазор между импульсом и реакцией, и в этом зазоре рождаются точные решения.",
+        "Это и есть рабочий перенос: практика встроена в день, а не существует отдельно от него.",
+      ],
+    },
+    {
       slug: "svarga-system",
       title: "Что такое система Сварга",
       excerpt: "Современный путь, основанный на древних знаниях — исцеление, баланс и внутренний рост.",
@@ -665,7 +701,7 @@ const ru = {
       slug: "shamatha-vipassana",
       title: "Шаматха и Випассана: врата в Турийное состояние",
       excerpt: "Две практики, которые упорядочивают хаос сознания и открывают доступ к чистому Осознаванию.",
-      image: assets.imgMeditation,
+      image: assets.imgBrain,
       body: [
         "Человеческий ум прыгает между мыслями, эмоциями и воспоминаниями, как гиперактивная обезьяна. В буддийской традиции есть две практики, которые помогают упорядочить этот хаос и научиться управлять вниманием.",
         "Шаматха — это техника успокоения ума через концентрацию. Внимание удерживается на дыхании, телесных ощущениях или визуальном объекте. Обезьяна всё ещё прыгает, но вы уже не обязаны прыгать вместе с ней. Цель — не подавить мысли, а наблюдать их со спокойной отстранённостью.",
@@ -689,7 +725,7 @@ const ru = {
       slug: "mind-poisons",
       title: "Яды ума: инструкция по внутренней детоксикации",
       excerpt: "Возбуждение, вялость и невежество — это не приговор, а состояния системы, которые можно менять.",
-      image: assets.imgLotus,
+      image: assets.imgDetox,
       body: [
         "Наш ум работает как озеро. Когда он спокоен — вода прозрачна, видно и дно, и небо. Когда захламлён мыслями — мутно, и жизнь кажется такой же мутной. Это не приговор, а состояние системы — его можно менять.",
         "Духовные традиции называют три главных «яда» ума: возбуждение, вялость и невежество. Возбуждение — переизбыток мыслей и постоянный поиск действия. Помогают: удлинённый выдох, мягкое движение, балансирующее полушария, и снижение вечерней перегрузки контентом и новостями.",
@@ -1291,6 +1327,42 @@ const he = {
   ],
   articles: [
     {
+      slug: "breath",
+      title: "נשימה ככלי לוויסות עצמי",
+      excerpt: "איך משמעת הנשימה מפחיתה לחץ ומחזירה בהירות מחשבתית.",
+      image: assets.imgLotus,
+      body: [
+        "בעומס הנשימה הופכת לשטחית ולא יציבה. בית החזה נסגר, הסרעפת מאבדת תנועה, ומערכת העצבים נכנסת למצב חרדה. הקשב מתפצל וההחלטות הופכות לתגובתיות.",
+        "כשמחזירים קצב נשימה מודע, המערכת הפרא-סימפתטית מקבלת סימן ביטחון. הדופק מתאזן, השרירים משחררים, ונפתחת הפסקה אמיתית בין הגירוי לתגובה.",
+        "בסוורגה אנחנו עובדים עם שלושה פרוטוקולים בסיסיים: נשיפה מאורכת לייצוב מהיר, נשימה מחזורית להתחדשות אנרגטית, והתבוננות שקטה בנשימה לאימון קשב. כל אחד 5–12 דקות ומשתלב בכל יום עבודה.",
+        "אחרי 3–4 שבועות תרגול קבוע התלמידים מדווחים על שינה יציבה יותר, שלווה בשיחות לחוצות וקיבולת ריכוז ארוכה יותר במשימות מורכבות.",
+      ],
+    },
+    {
+      slug: "movement",
+      title: "תנועה איטית ויציבה מדויקת",
+      excerpt: "למה עבודה גופנית עדינה יעילה יותר מעומס חד במצב לחץ.",
+      image: assets.mosheGarden,
+      body: [
+        "בעומס יומיומי הגוף עובד מפיצויים: חלק מהאזורים מתעמסים, אחרים יוצאים מתנועה. נוצרים כתפיים מכווצות, גב תחתון כבד ונשימה שטחית — ועייפות כרונית שהשינה לא פותרת.",
+        "עומס חד במצב כזה בדרך כלל מחזק פיצויים במקום להסיר אותם. הגוף מגן על עצמו והמאמץ הולך לפצועים נוספים ולא להתפתחות.",
+        "תרגול איטי ומדויק מחזיר למפרקים מסלול טבעי, לשרירים — טונוס תפעולי, ולעמוד השדרה — אורך ועוגן. משם צומחות יציבות, אנרגיה ותחושת שליטה פנימית.",
+        "מינימום קבוע — 20 דקות ביום. די בכך כדי לראות תוך חודש שינויים ביציבה, בנשימה ובאיכות השינה.",
+      ],
+    },
+    {
+      slug: "attention",
+      title: "אימון קשב בתוך היומיום",
+      excerpt: "איך להעביר את התרגול מהשיעור לעבודה, לתקשורת ולקבלת החלטות.",
+      image: assets.imgMeditation,
+      body: [
+        "התוצאה האמיתית נמדדת לא על המזרן אלא בסיטואציות יומיומיות: משא ומתן, דדליינים, שיחות מורכבות. זו הרמה שבה התרגול הופך ליתרון תחרותי ממשי.",
+        "האימון הבסיסי של הקשב — מחזורים קצרים: 60–90 שניות של נוכחות מודעת, חוזרים כמה פעמים ביום. לא מדיטציה של שעה, אלא יכולת חזרה מהירה לפוקוס.",
+        "אחרי כמה שבועות נעלם ההרגל לפעול על טייס אוטומטי. נפתח פער בין הדחף לתגובה, ובפער הזה נולדות החלטות מדויקות.",
+        "זו ההעברה האמיתית: התרגול חי בתוך היום, לא נפרד ממנו.",
+      ],
+    },
+    {
       slug: "svarga-system",
       title: "מהי שיטת סוורגה",
       excerpt: "שיטה מודרנית המבוססת על ידע עתיק — ריפוי, איזון וצמיחה פנימית.",
@@ -1330,7 +1402,7 @@ const he = {
       slug: "shamatha-vipassana",
       title: "שמתהה וויפאסנה: השער למצב טוריה",
       excerpt: "שני תרגולים המסדרים את כאוס התודעה ופותחים גישה למודעות טהורה.",
-      image: assets.imgMeditation,
+      image: assets.imgBrain,
       body: [
         "התודעה האנושית קופצת בין מחשבות, רגשות וזכרונות, כמו קוף היפראקטיבי. במסורת הבודהיסטית יש שני תרגולים שעוזרים לסדר את הכאוס הזה ולפתח שליטה בקשב.",
         "שמתהה היא טכניקה להרגעת התודעה דרך ריכוז. הקשב נשמר על הנשימה, על תחושה גופנית או על אובייקט. הקוף עדיין קופץ, אבל אתם כבר לא חייבים לקפוץ איתו. המטרה אינה לדכא מחשבות, אלא להתבונן בהן ברוגע.",
@@ -1354,7 +1426,7 @@ const he = {
       slug: "mind-poisons",
       title: "ארסי התודעה: מדריך לניקוי פנימי",
       excerpt: "התרגזות, רפיון ובורות — לא גזרה, אלא מצבים של המערכת שניתן לשנות.",
-      image: assets.imgLotus,
+      image: assets.imgDetox,
       body: [
         "התודעה שלנו פועלת כמו אגם. כשהיא רגועה — המים שקופים, רואים את הקרקעית ואת השמיים. כשהיא עמוסה במחשבות — עכור, והחיים נראים עכורים. זו לא גזרה — זו מצב מערכת שאפשר לשנות.",
         "מסורות רוחניות מזהות שלושה «ארסים» עיקריים: עוררות יתר, רפיון ובורות. עוררות — שטף מחשבות וחיפוש מתמיד אחר פעולה. עוזרים: נשיפה מאורכת, תנועה עדינה שמאזנת את ההמיספרות, והפחתת עומס תכנים וחדשות בערב.",
@@ -1706,6 +1778,42 @@ const en = {
   ],
   articles: [
     {
+      slug: "breath",
+      title: "Breath as a self-regulation tool",
+      excerpt: "How breath discipline reduces stress and restores mental clarity.",
+      image: assets.imgLotus,
+      body: [
+        "Under pressure, breath becomes shallow and irregular. The chest closes, the diaphragm loses amplitude, and the nervous system locks into alarm. Attention fragments and decisions become reactive.",
+        "Returning a conscious inhale-exhale rhythm sends the parasympathetic branch a safety signal. Heart rhythm settles, shoulders and neck release, and a real pause appears between stimulus and response.",
+        "In Svarga we work with three base protocols: extended exhale for fast stabilization, cyclic breath for energy renewal, and quiet breath observation for attention training. Each takes 5–12 minutes and fits into any working day.",
+        "After 3–4 weeks of regular practice, students report stable sleep, calm in tense conversations, and longer capacity to hold complex tasks without burnout.",
+      ],
+    },
+    {
+      slug: "movement",
+      title: "Slow movement and precise posture",
+      excerpt: "Why careful somatic work outperforms intensity when your baseline is stress.",
+      image: assets.mosheGarden,
+      body: [
+        "Chronic rush pushes the body into compensations: some zones overload, others drop out of movement. Tight shoulders, heavy lower back, shallow breath — and fatigue that sleep doesn't clear.",
+        "Hard load on top of this usually deepens compensation rather than clearing it. The body defends, effort becomes more strain, not development.",
+        "Slow, precise practice returns joints to natural trajectory, muscles to working tone, and the spine to length and support. From there grow stability, energy, and inner control.",
+        "Minimum regular dose — 20 minutes a day. Enough to see posture, breath, and sleep change within a month.",
+      ],
+    },
+    {
+      slug: "attention",
+      title: "Attention training in everyday life",
+      excerpt: "How to transfer practice from the mat into work, communication, and decisions.",
+      image: assets.imgMeditation,
+      body: [
+        "Real progress isn't tested on the mat — it shows up in negotiation, deadlines, and emotionally loaded conversations. That's where practice becomes a competitive edge.",
+        "Base attention training is short cycles: 60–90 seconds of present-state awareness, repeated several times a day. Not a one-hour meditation — a fast-return-to-focus skill.",
+        "After weeks the autopilot habit drops. A gap opens between impulse and response, and precise decisions come from inside that gap.",
+        "That's the real transfer: practice lives inside the day, not next to it.",
+      ],
+    },
+    {
       slug: "svarga-system",
       title: "What is the Svarga system",
       excerpt: "A modern path rooted in ancient knowledge — healing, balance, and inner growth.",
@@ -1745,7 +1853,7 @@ const en = {
       slug: "shamatha-vipassana",
       title: "Shamatha and Vipassana: gateway to Turiya",
       excerpt: "Two practices that order the chaos of mind and open access to pure Awareness.",
-      image: assets.imgMeditation,
+      image: assets.imgBrain,
       body: [
         "The human mind jumps between thought, emotion, and memory like a hyperactive monkey. The Buddhist tradition offers two practices that bring this chaos into order and develop true control over attention.",
         "Shamatha is the technique of calming the mind through concentration. Attention is held on breath, body sensation, or a visual object. The monkey still jumps — but you are no longer obliged to jump with it. The goal is not to suppress thought, but to observe it with calm detachment.",
@@ -1769,7 +1877,7 @@ const en = {
       slug: "mind-poisons",
       title: "Poisons of the mind: a guide to inner detox",
       excerpt: "Agitation, lethargy, and ignorance — not a verdict, but states of the system that can change.",
-      image: assets.imgLotus,
+      image: assets.imgDetox,
       body: [
         "Our mind works like a lake. When still — water is clear, you see the bottom and the sky. When cluttered with thought — turbid, and life feels turbid too. This is not a verdict; it's a state of the system that can be changed.",
         "Three primary «poisons» of the mind: agitation, lethargy, and ignorance. Agitation — an overflow of thought and a constant search for action. Remedies: extended exhale, gentle bilateral movement, less evening overload from news and heavy content.",
@@ -2328,6 +2436,42 @@ const de = {
   ],
   articles: [
     {
+      slug: "breath",
+      title: "Atem als Werkzeug der Selbstregulation",
+      excerpt: "Wie Atemdisziplin Stress senkt und die mentale Klarheit zurückbringt.",
+      image: assets.imgLotus,
+      body: [
+        "Unter Druck wird der Atem flach und unrhythmisch. Der Brustkorb schließt sich, das Zwerchfell verliert seine Amplitude, das Nervensystem rastet in Alarm. Die Aufmerksamkeit zerfällt, Entscheidungen werden reaktiv.",
+        "Eine bewusste Ein-Aus-Atmung sendet dem parasympathischen Nervensystem ein Sicherheitssignal. Der Herzrhythmus beruhigt sich, Schultern und Nacken lockern sich, eine echte Pause öffnet sich zwischen Reiz und Reaktion.",
+        "In Svarga arbeiten wir mit drei Basisprotokollen: verlängerter Ausatem zur schnellen Stabilisierung, zyklisches Atmen zur Energieerneuerung und stille Atembeobachtung zum Aufmerksamkeitstraining. Jedes dauert 5–12 Minuten und passt in jeden Arbeitstag.",
+        "Nach 3–4 Wochen regelmäßiger Praxis berichten Schüler von stabilem Schlaf, Ruhe in angespannten Gesprächen und längerer Belastbarkeit für komplexe Aufgaben ohne Burnout.",
+      ],
+    },
+    {
+      slug: "movement",
+      title: "Langsame Bewegung und präzise Haltung",
+      excerpt: "Warum sorgfältige Körperarbeit Intensität schlägt, wenn der Grundzustand Stress ist.",
+      image: assets.mosheGarden,
+      body: [
+        "Chronische Hetze treibt den Körper in Kompensation: einige Zonen werden überlastet, andere fallen aus der Bewegung. Verspannte Schultern, schwerer unterer Rücken, flacher Atem — und Müdigkeit, die kein Schlaf mehr ausgleicht.",
+        "Harte Belastung darauf vertieft die Kompensation meist, statt sie aufzulösen. Der Körper verteidigt sich, der Aufwand wird zu mehr Anspannung statt zu Entwicklung.",
+        "Langsame, präzise Praxis bringt die Gelenke in natürliche Bahnen zurück, den Muskeln Arbeitstonus und der Wirbelsäule Länge und Stütze. Daraus wachsen Stabilität, Energie und innere Kontrolle.",
+        "Minimales regelmäßiges Maß — 20 Minuten am Tag. Genug, um innerhalb eines Monats Veränderungen in Haltung, Atem und Schlaf zu sehen.",
+      ],
+    },
+    {
+      slug: "attention",
+      title: "Aufmerksamkeit im Alltag trainieren",
+      excerpt: "Wie sich Praxis von der Matte in Arbeit, Kommunikation und Entscheidungen überträgt.",
+      image: assets.imgMeditation,
+      body: [
+        "Echter Fortschritt zeigt sich nicht auf der Matte — sondern in Verhandlungen, Deadlines und emotional aufgeladenen Gesprächen. Hier wird Praxis zum echten Wettbewerbsvorteil.",
+        "Aufmerksamkeitstraining bedeutet kurze Zyklen: 60–90 Sekunden Präsenz, mehrmals täglich wiederholt. Keine Stundenmeditation — sondern eine schnell verfügbare Rückkehrfähigkeit in den Fokus.",
+        "Nach Wochen verschwindet das Autopilot-Verhalten. Zwischen Impuls und Reaktion öffnet sich eine Lücke, und präzise Entscheidungen entstehen aus dieser Lücke.",
+        "Das ist die eigentliche Übertragung: Praxis lebt im Tag, nicht daneben.",
+      ],
+    },
+    {
       slug: "svarga-system",
       title: "Was ist das Svarga-System",
       excerpt: "Ein moderner Weg auf altem Wissen — Heilung, Balance und inneres Wachstum.",
@@ -2367,7 +2511,7 @@ const de = {
       slug: "shamatha-vipassana",
       title: "Shamatha und Vipassana: Tor zum Turiya-Zustand",
       excerpt: "Zwei Praktiken, die das Chaos des Geistes ordnen und Zugang zu reinem Gewahrsein öffnen.",
-      image: assets.imgMeditation,
+      image: assets.imgBrain,
       body: [
         "Der menschliche Geist springt zwischen Gedanken, Gefühlen und Erinnerungen wie ein hyperaktiver Affe. Die buddhistische Tradition kennt zwei Praktiken, die dieses Chaos ordnen und echte Kontrolle über die Aufmerksamkeit entwickeln.",
         "Shamatha ist die Technik der Geistesberuhigung durch Konzentration. Die Aufmerksamkeit ruht auf Atem, Körperempfindung oder einem visuellen Objekt. Der Affe springt weiter — du musst nicht mehr mitspringen. Ziel ist nicht die Unterdrückung von Gedanken, sondern ihre gelassene Betrachtung.",
@@ -2391,7 +2535,7 @@ const de = {
       slug: "mind-poisons",
       title: "Gifte des Geistes: Anleitung zur inneren Entgiftung",
       excerpt: "Erregung, Trägheit und Unwissenheit — kein Urteil, sondern Zustände des Systems, die sich verändern lassen.",
-      image: assets.imgLotus,
+      image: assets.imgDetox,
       body: [
         "Unser Geist arbeitet wie ein See. Wenn er still ist — ist das Wasser klar, man sieht Grund und Himmel. Wenn er von Gedanken überfüllt ist — trübe, und das Leben fühlt sich ebenso trübe an. Das ist kein Urteil, sondern ein Zustand der Systems, der verändert werden kann.",
         "Drei Hauptgifte des Geistes: Erregung, Trägheit, Unwissenheit. Erregung — eine Flut von Gedanken und ständige Suche nach Aktivität. Hilfreich: verlängerte Ausatmung, sanfte hemisphärenbalancierende Bewegung, weniger abendliche Reizüberflutung durch Nachrichten und schwere Inhalte.",
