@@ -585,6 +585,27 @@ export function trainingPage(copy) {
         </div>
       </div>
     </section>
+    ${t.standaloneBlocks && t.standaloneBlocks.length ? `
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>${t.standaloneTitle || ""}</h2>
+        </div>
+      </div>
+    </section>
+    ${t.standaloneBlocks.map((b, i) => `
+      <section class="section ${i % 2 === 1 ? "muted-band" : "compact-top"}">
+        <div class="container coaching-block">
+          <figure class="coaching-block-image reveal">
+            <img src="${(b.image && assets[b.image]) || assets.mosheGarden}" alt="${b.title}" loading="lazy" onerror="this.onerror=null;this.src='${assets.mosheGarden}';" />
+          </figure>
+          <div class="coaching-block-text reveal">
+            <h2>${b.title}</h2>
+            ${(b.paragraphs || []).map((p) => `<p>${p}</p>`).join("")}
+          </div>
+        </div>
+      </section>
+    `).join("")}` : ""}
     <section class="section">
       <div class="container">
         <div class="cta-panel reveal">

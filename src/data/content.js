@@ -629,9 +629,8 @@ const ru = {
       {
         key: "B",
         title: "Энергетические практики (система Цигун)",
-        intro: "Очищение, накопление и распределение энергии. Мягкий и жёсткий цигун, система «Кремень», вьетнамские вариации.",
+        intro: "Укрепление, накопление и распределение энергии. Развитие внутренней силы. Жёсткий цигун, система «Кремень», вьетнамские вариации.",
         items: [
-          ["course-zdravotel", "ЗДРАВОТЕЛ", "Внутренняя сила и энергетический баланс для опытных практикующих."],
           ["course-iron-shirt", "Железная рубашка", "Жёсткий цигун: плотность тела и устойчивость к нагрузке."],
           ["course-kremen", "Кремень 1-й уровень", "Базовая волевая устойчивость и физическая плотность."],
           ["course-kremen-h2", "Кремень 2-й уровень", "Продвинутая внутренняя сила для опытных учеников."],
@@ -642,9 +641,9 @@ const ru = {
       {
         key: "C",
         title: "Структурная работа с телом",
-        intro: "Выравнивание позвоночника, осанки и работы внутренних органов. Баланс телесных систем.",
+        intro: "Работа с позвоночником, осанкой и внутренними органами. Структурный баланс и выравнивание тела.",
         items: [
-          ["course-iron-shirt", "Железная рубашка", "Плотность тела через дыхание и точечное напряжение."],
+          ["course-zdravotel", "ЗДРАВОТЕЛ", "Восстановление структуры тела, внутренних органов и внутреннего баланса."],
         ],
       },
       {
@@ -679,6 +678,27 @@ const ru = {
           ["course-heart-radiance", "Медитация сердечного радения", "Тёплая внутренняя радость, разворачивающаяся изнутри наружу."],
           ["marathon-vipassana", "Випассана", "Наблюдение за внутренним без вмешательства — ясность и спокойствие."],
           ["marathon-tantra", "Тантра чистой души", "Контакт с собой и выравнивание внутреннего мужского и женского начала."],
+        ],
+      },
+    ],
+    standaloneTitle: "Отдельные направления обучения и сопровождения",
+    standaloneBlocks: [
+      {
+        title: "Интегральный коучинг и развитие",
+        image: "moshePortrait",
+        paragraphs: [
+          "Отдельное направление обучения и наставничества: коучинг, психология и интегральное личностное развитие как единое поле работы.",
+          "Фокус — личностный рост, психологическая ясность, выстраивание жизненной структуры и внутреннее развитие. Не «методика», а формат сопровождения, в котором человек видит себя яснее и движется собственным ритмом.",
+          "Индивидуальные сессии. По договорённости — онлайн или телефонные консультации. Формат менторства и сопровождения, подстраивающийся под ваши задачи.",
+        ],
+      },
+      {
+        title: "Нутрициология и оздоровительное питание",
+        image: "imgNutrition",
+        paragraphs: [
+          "Отдельное направление обучения, посвящённое питанию: нутрициология и оздоровительное питание как самостоятельная практика, без слияния с коучингом.",
+          "Фокус — питание, оздоровление через еду, поддержка образа жизни, рост энергии и баланса. Без жёстких диет — устойчивые привычки, опирающиеся на ваше состояние.",
+          "Индивидуальные консультации. Персональное сопровождение и адаптация плана под ваш ритм, реакцию тела и долгосрочные цели.",
         ],
       },
     ],
@@ -1445,9 +1465,8 @@ const he = {
       {
         key: "B",
         title: "תרגולי אנרגיה (מערכת הצ'י-גונג)",
-        intro: "טיהור, צבירה וחלוקה של אנרגיה. צ'י-גונג רך וקשיח, שיטת «קרמיין», ווריאציות וייטנאמיות.",
+        intro: "חיזוק, צבירה והפצה של אנרגיה. פיתוח כוח פנימי. צ'י-גונג קשיח, שיטת «קרמיין», ווריאציות וייטנאמיות.",
         items: [
-          ["course-zdravotel", "זדרווטל", "כוח פנימי ואיזון אנרגטי למתרגלים מנוסים."],
           ["course-iron-shirt", "חולצת הברזל", "צ'י-גונג קשיח: צפיפות גוף ועמידות בעומס."],
           ["course-kremen", "קרמיין רמה 1", "יציבות רצונית בסיסית וצפיפות פיזית."],
           ["course-kremen-h2", "קרמיין רמה 2", "כוח פנימי מתקדם למתרגלים מנוסים."],
@@ -1458,9 +1477,9 @@ const he = {
       {
         key: "C",
         title: "עבודה מבנית עם הגוף",
-        intro: "יישור עמוד השדרה, תיקון יציבה ואיזון אברים פנימיים. ויסות מערכות הגוף.",
+        intro: "עבודה עם עמוד השדרה, יציבה ואיברים פנימיים. איזון מבני ויישור הגוף.",
         items: [
-          ["course-iron-shirt", "חולצת הברזל", "צפיפות גוף דרך נשימה ומתח נקודתי."],
+          ["course-zdravotel", "זדרווטל", "שיקום מבנה הגוף, האיברים הפנימיים והאיזון הפנימי."],
         ],
       },
       {
@@ -1495,6 +1514,27 @@ const he = {
           ["course-heart-radiance", "מדיטציית קרינת הלב", "שמחה פנימית חמימה המתפשטת מבפנים החוצה."],
           ["marathon-vipassana", "ויפאסנה", "התבוננות במה שקורה בפנים — בהירות ושלווה."],
           ["marathon-tantra", "טנטרת הנשמה הזכה", "קשר עם עצמך ויישור הזכרי-נקבי הפנימי."],
+        ],
+      },
+    ],
+    standaloneTitle: "כיווני לימוד וליווי עצמאיים",
+    standaloneBlocks: [
+      {
+        title: "קואצ'ינג אינטגרטיבי והתפתחות",
+        image: "moshePortrait",
+        paragraphs: [
+          "כיוון לימוד וליווי נפרד: קואצ'ינג, פסיכולוגיה והתפתחות אישית אינטגרטיבית — כשדה עבודה אחד.",
+          "המוקד — צמיחה אישית, בהירות פסיכולוגית, בניית מבנה חיים והתפתחות פנימית. לא «שיטה», אלא פורמט ליווי שבו אדם רואה את עצמו ברור יותר ונע בקצב משלו.",
+          "מפגשים אישיים. לפי תיאום — אונליין או שיחות טלפון. פורמט מנטורינג וליווי המותאם למטרות שלכם.",
+        ],
+      },
+      {
+        title: "רפואה תזונתית (REFUA TZUNATIT)",
+        image: "imgNutrition",
+        paragraphs: [
+          "כיוון לימוד נפרד המוקדש לתזונה: רפואה תזונתית כתחום עצמאי, ללא מיזוג עם הקואצ'ינג.",
+          "המוקד — תזונה, ריפוי דרך אוכל, תמיכה באורח חיים, אנרגיה ואיזון. ללא דיאטות קשוחות — הרגלים יציבים שמתבססים על מצבכם.",
+          "ייעוצים אישיים. ליווי אישי והתאמת התוכנית לקצב שלכם, לתגובת הגוף ולמטרות ארוכות הטווח.",
         ],
       },
     ],
@@ -2003,9 +2043,8 @@ const en = {
       {
         key: "B",
         title: "Energy practices (Qigong system)",
-        intro: "Energy purification, accumulation, and distribution. Soft and hard Qigong, the «Kremen» system, Vietnamese variations.",
+        intro: "Strengthening, accumulation, and distribution of energy. Internal power development. Hard Qigong, the «Kremen» (Flint) system, Vietnamese variations.",
         items: [
-          ["course-zdravotel", "ZDRAVOTEL", "Inner strength and energy balance for experienced practitioners."],
           ["course-iron-shirt", "Iron Shirt", "Hard qigong: body density and resilience to load."],
           ["course-kremen", "Kremen Level 1", "Base willful resilience and physical density."],
           ["course-kremen-h2", "Kremen Level 2", "Advanced inner strength for seasoned practitioners."],
@@ -2016,9 +2055,9 @@ const en = {
       {
         key: "C",
         title: "Structural body work",
-        intro: "Spine alignment, posture correction, internal-organ work, and body-system balance.",
+        intro: "Work with the spine, posture, and internal organs. Structural balance and alignment of the body.",
         items: [
-          ["course-iron-shirt", "Iron Shirt", "Body density through breath and pointed tension."],
+          ["course-zdravotel", "ZDRAVOTEL", "Restores body structure, internal organs, and internal balance."],
         ],
       },
       {
@@ -2053,6 +2092,27 @@ const en = {
           ["course-heart-radiance", "Heart Radiance Meditation", "Warm inner joy radiating from within outward."],
           ["marathon-vipassana", "Vipassana", "Observe what arises inside — clarity and calm."],
           ["marathon-tantra", "Tantra of the Clear Soul", "Contact with self and inner masculine/feminine alignment."],
+        ],
+      },
+    ],
+    standaloneTitle: "Standalone learning and mentoring directions",
+    standaloneBlocks: [
+      {
+        title: "Integrative Coaching & Development",
+        image: "moshePortrait",
+        paragraphs: [
+          "A separate learning and mentoring direction: coaching, psychology, and integrative personal development as one unified field of work.",
+          "Focus on personal growth, psychological clarity, building life structure, and inner development. Not a «method» but a mentoring format in which a person sees themselves more clearly and moves at their own pace.",
+          "Personal sessions are available. Online or phone consultations are possible by arrangement. A mentoring and guidance format adapted to your tasks.",
+        ],
+      },
+      {
+        title: "Nutrition / Healing Nutrition",
+        image: "imgNutrition",
+        paragraphs: [
+          "A separate learning direction dedicated to nutrition: nutrition and healing nutrition as a standalone practice, not merged with coaching.",
+          "Focus on nutrition, healing through food, lifestyle support, energy and balance. No rigid diets — sustainable habits that rest on your current state.",
+          "Personal consultations are available. Individualized guidance and ongoing support, adapted to your rhythm, body's response, and long-term goals.",
         ],
       },
     ],
@@ -2768,9 +2828,8 @@ const de = {
       {
         key: "B",
         title: "Energiepraktiken (Qigong-System)",
-        intro: "Energiereinigung, -aufbau und -verteilung. Sanftes und hartes Qigong, das «Kremen»-System, vietnamesische Variationen.",
+        intro: "Stärkung, Sammlung und Verteilung der Energie. Entwicklung innerer Kraft. Hartes Qigong, das «Kremen»-System, vietnamesische Variationen.",
         items: [
-          ["course-zdravotel", "ZDRAVOTEL", "Innere Stärke und Energiebalance für erfahrene Übende."],
           ["course-iron-shirt", "Eisenhemd", "Hartes Qigong: Körperdichte und Belastungsstabilität."],
           ["course-kremen", "Kremen Stufe 1", "Willenskraft und körperliche Dichte als Basis."],
           ["course-kremen-h2", "Kremen Stufe 2", "Fortgeschrittene innere Kraft für erfahrene Praktizierende."],
@@ -2781,9 +2840,9 @@ const de = {
       {
         key: "C",
         title: "Körperstruktur",
-        intro: "Wirbelsäulenausrichtung, Haltungskorrektur, Arbeit mit inneren Organen und Balance der Körpersysteme.",
+        intro: "Arbeit mit Wirbelsäule, Haltung und inneren Organen. Strukturelle Balance und Ausrichtung des Körpers.",
         items: [
-          ["course-iron-shirt", "Eisenhemd", "Körperdichte durch Atem und punktuelle Spannung."],
+          ["course-zdravotel", "ZDRAVOTEL", "Stellt Körperstruktur, innere Organe und inneres Gleichgewicht wieder her."],
         ],
       },
       {
@@ -2818,6 +2877,27 @@ const de = {
           ["course-heart-radiance", "Meditation der Herzensstrahlung", "Warme innere Freude, die von innen nach außen strahlt."],
           ["marathon-vipassana", "Vipassana", "Beobachtung des Inneren ohne Eingriff — Klarheit und Ruhe."],
           ["marathon-tantra", "Tantra der klaren Seele", "Kontakt zu sich selbst und innere Ausrichtung des Männlichen und Weiblichen."],
+        ],
+      },
+    ],
+    standaloneTitle: "Eigenständige Lehr- und Begleitungsrichtungen",
+    standaloneBlocks: [
+      {
+        title: "Integratives Coaching & Entwicklung",
+        image: "moshePortrait",
+        paragraphs: [
+          "Eine eigenständige Lehr- und Begleitungsrichtung: Coaching, Psychologie und integrative persönliche Entwicklung als ein einheitliches Arbeitsfeld.",
+          "Fokus auf persönliches Wachstum, psychologische Klarheit, den Aufbau von Lebensstruktur und innere Entwicklung. Keine «Methode», sondern ein Begleitungsformat, in dem ein Mensch sich klarer sieht und in seinem eigenen Rhythmus geht.",
+          "Persönliche Sitzungen verfügbar. Online- oder Telefonberatungen nach Vereinbarung. Mentoring- und Begleitungsformat, abgestimmt auf Ihre Anliegen.",
+        ],
+      },
+      {
+        title: "Ernährung / Heilende Ernährung",
+        image: "imgNutrition",
+        paragraphs: [
+          "Eine eigenständige Lehrrichtung mit Schwerpunkt Ernährung: Ernährung und heilende Ernährung als eigenständige Praxis, getrennt vom Coaching.",
+          "Fokus auf Ernährung, Heilung durch Nahrung, Unterstützung des Lebensstils, Energie und Balance. Keine starren Diäten — nachhaltige Gewohnheiten, die auf Ihrem aktuellen Zustand aufbauen.",
+          "Persönliche Beratungen verfügbar. Individuelle Begleitung, abgestimmt auf Ihren Rhythmus, die Reaktionen Ihres Körpers und langfristige Ziele.",
         ],
       },
     ],
