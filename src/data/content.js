@@ -684,12 +684,26 @@ const ru = {
     ],
   },
   coaching: {
-    intro: "Сейчас я прохожу обучение на интегрального коуча-терапевта и одновременно работаю как специалист по нутрициологии. Моя задача — не заменять врача или психолога, а быть рядом и помогать человеку выстроить целостный образ жизни.",
-    servicesTitle: "Что входит в сопровождение",
-    services: [
-      ["Индивидуальные коуч-сессии", "Прояснение запроса, работа с состоянием и шаги, которые встраиваются в реальную жизнь."],
-      ["Нутрициологические консультации", "Питание и образ жизни — без жёстких диет, с опорой на ваши задачи и состояние."],
-      ["Адаптация практик под вас", "Дыхание, движение и медитация подбираются по уровню, расписанию и приоритетам."],
+    intro: "Два направления личной работы — единое поле сопровождения и забота о теле через питание. Моя задача — не заменять врача или психолога, а быть рядом и помогать выстроить целостный, устойчивый образ жизни.",
+    blocks: [
+      {
+        title: "Интегральный коучинг и развитие",
+        image: "moshePortrait",
+        paragraphs: [
+          "Единое поле личной работы: коучинг, психология и интегральное развитие как одна непрерывная линия. Без жёсткого разделения — потому что человек тоже не разделён.",
+          "Фокус — личностное развитие, внутренняя структура, психологическая ясность и устойчивый рост. Работа со смыслами, состоянием, привычками и реальными выборами повседневной жизни.",
+          "Индивидуальные сессии. По договорённости — онлайн или телефонные консультации. Регулярность и формат подбираются под ваши задачи и ритм.",
+        ],
+      },
+      {
+        title: "Нутрициология и оздоровительное питание",
+        image: "imgNutrition",
+        paragraphs: [
+          "Индивидуальное сопровождение по питанию — без жёстких диет и шаблонов. Подход опирается на энергию и баланс, а не на ограничения.",
+          "Работа с образом жизни и поддержкой здоровья: сон, ритм, питание, восстановление. Цель — устойчивая энергия и ясность, а не временный эффект.",
+          "Личные консультации по запросу. Подбор плана, обсуждение результатов и корректировка по мере того, как состояние меняется.",
+        ],
+      },
     ],
     contactTitle: "Как начать",
     contactNote: "Запись на коучинг и нутрициологию — напрямую: WhatsApp, Telegram или форма на странице контактов.",
@@ -1486,12 +1500,26 @@ const he = {
     ],
   },
   coaching: {
-    intro: "כעת אני בלימודי קואצ'ינג אינטגרטיבי-טיפולי ובמקביל עוסק בתזונה. תפקידי אינו להחליף רופא או פסיכולוג — אלא להיות לצידכם ולעזור לבנות אורח חיים שלם.",
-    servicesTitle: "מה כולל הליווי",
-    services: [
-      ["מפגשי קואצ'ינג אישיים", "הבהרת הבקשה, עבודה עם המצב וצעדים שמשתלבים בחיים האמיתיים."],
-      ["ייעוץ תזונתי", "תזונה ואורח חיים — בלי דיאטות קשוחות, מותאם למטרות ולמצב שלכם."],
-      ["התאמת תרגולים אליכם", "נשימה, תנועה ומדיטציה נבחרים לפי הרמה, לוח הזמנים והעדיפויות."],
+    intro: "שני כיווני עבודה אישית — שדה אחד מאוחד של ליווי ודרך לטפל בגוף באמצעות תזונה. תפקידי אינו להחליף רופא או פסיכולוג — אלא להיות לצידכם ולעזור לבנות אורח חיים שלם ויציב.",
+    blocks: [
+      {
+        title: "קואצ'ינג אינטגרטיבי והתפתחות",
+        image: "moshePortrait",
+        paragraphs: [
+          "שדה אחד של עבודה אישית: קואצ'ינג, פסיכולוגיה והתפתחות אינטגרטיבית כקו רציף אחד. בלי הפרדות נוקשות — כי גם האדם אינו מחולק לחלקים.",
+          "המוקד — התפתחות אישית, מבנה פנימי, בהירות פסיכולוגית וצמיחה יציבה. עבודה עם משמעות, מצב, הרגלים ובחירות אמיתיות של היומיום.",
+          "מפגשים אישיים. לפי תיאום — אונליין או שיחות טלפון. תדירות ופורמט מותאמים אליכם.",
+        ],
+      },
+      {
+        title: "רפואה תזונתית (REFUA TZUNATIT)",
+        image: "imgNutrition",
+        paragraphs: [
+          "ליווי אישי בתזונה — בלי דיאטות קשוחות ובלי תבניות. גישה שמבוססת על אנרגיה ואיזון, לא על איסורים.",
+          "עבודה עם אורח חיים ותמיכה בבריאות: שינה, קצב, תזונה והתאוששות. המטרה — אנרגיה יציבה ובהירות, לא אפקט זמני.",
+          "ייעוצים אישיים לפי דרישה. בניית תוכנית, מעקב והתאמה ככל שהמצב משתנה.",
+        ],
+      },
     ],
     contactTitle: "איך מתחילים",
     contactNote: "הרשמה לקואצ'ינג ולתזונה — ישירות: וואטסאפ, טלגרם או טופס בעמוד הקשר.",
@@ -2030,12 +2058,26 @@ const en = {
     ],
   },
   coaching: {
-    intro: "I am currently training as an integrative coach-therapist while working as a nutrition specialist. My role is not to replace a doctor or psychologist — it is to stand beside you and help you build a whole, sustainable way of life.",
-    servicesTitle: "What's included",
-    services: [
-      ["Personal coaching sessions", "Clarifying the request, working with state, and concrete steps that fit your real life."],
-      ["Nutritional consulting", "Food and lifestyle — no rigid diets, shaped to your goals and current state."],
-      ["Practice adaptation", "Breath, movement, and meditation tuned to your level, schedule, and priorities."],
+    intro: "Two directions of personal work — one unified field of guidance, and care for the body through nutrition. My role is not to replace a doctor or a psychologist, but to stand beside you and help build a whole, sustainable way of life.",
+    blocks: [
+      {
+        title: "Integrative Coaching & Development",
+        image: "moshePortrait",
+        paragraphs: [
+          "A single field of personal work: coaching, psychology, and integrative development as one continuous line — without rigid separation, because the person is not separated either.",
+          "Focus on personal development, inner structure, psychological clarity, and steady growth. Work with meaning, state, habits, and the real choices of everyday life.",
+          "Individual sessions are available. Online or phone consultations can be scheduled. Frequency and format are tailored to your goals and rhythm.",
+        ],
+      },
+      {
+        title: "Nutrition / Healing Nutrition",
+        image: "imgNutrition",
+        paragraphs: [
+          "Individual nutritional guidance — no rigid diets, no rigid templates. The approach is built on energy and balance, not on restriction.",
+          "Lifestyle and health support: sleep, rhythm, food, and recovery. The goal is sustainable energy and clarity, not a temporary effect.",
+          "Personal consultations on request. A plan is shaped, results are reviewed, and the path is adjusted as your state evolves.",
+        ],
+      },
     ],
     contactTitle: "How to start",
     contactNote: "Coaching and nutrition bookings — direct: WhatsApp, Telegram, or the form on the contact page.",
@@ -2781,12 +2823,26 @@ const de = {
     ],
   },
   coaching: {
-    intro: "Ich befinde mich derzeit in der Ausbildung zum integrativen Coach-Therapeuten und arbeite gleichzeitig als Ernährungsspezialist. Mein Ziel ist es nicht, einen Arzt oder Psychologen zu ersetzen — sondern an Ihrer Seite zu sein und Ihnen zu helfen, einen ganzheitlichen Lebensstil aufzubauen.",
-    servicesTitle: "Inhalt der Begleitung",
-    services: [
-      ["Persönliche Coaching-Sitzungen", "Klärung des Anliegens, Arbeit am Zustand und Schritte, die sich in den realen Alltag einfügen."],
-      ["Ernährungsberatung", "Ernährung und Lebensstil — ohne harte Diäten, abgestimmt auf Ihre Ziele und Ihren Zustand."],
-      ["Praxisanpassung", "Atem, Bewegung und Meditation werden an Ihr Niveau und Ihren Zeitplan angepasst."],
+    intro: "Zwei Richtungen persönlicher Arbeit — ein einheitliches Feld der Begleitung und die Sorge um den Körper durch Ernährung. Mein Ziel ist nicht, einen Arzt oder Psychologen zu ersetzen, sondern an Ihrer Seite zu stehen und einen ganzheitlichen, nachhaltigen Lebensstil aufzubauen.",
+    blocks: [
+      {
+        title: "Integratives Coaching & Entwicklung",
+        image: "moshePortrait",
+        paragraphs: [
+          "Ein einheitliches Feld persönlicher Arbeit: Coaching, Psychologie und integrative Entwicklung als eine durchgängige Linie — ohne starre Trennung, denn auch der Mensch ist nicht getrennt.",
+          "Fokus auf persönliche Entwicklung, innere Struktur, psychologische Klarheit und stetiges Wachstum. Arbeit mit Sinn, Zustand, Gewohnheiten und den realen Entscheidungen des Alltags.",
+          "Einzelsitzungen verfügbar. Online- oder Telefonberatungen nach Vereinbarung. Frequenz und Format werden an Ihre Ziele und Ihren Rhythmus angepasst.",
+        ],
+      },
+      {
+        title: "Ernährung / Heilende Ernährung",
+        image: "imgNutrition",
+        paragraphs: [
+          "Individuelle Ernährungsbegleitung — ohne harte Diäten, ohne starre Schemata. Der Ansatz baut auf Energie und Balance, nicht auf Einschränkung.",
+          "Begleitung von Lebensstil und Gesundheit: Schlaf, Rhythmus, Ernährung und Regeneration. Das Ziel ist nachhaltige Energie und Klarheit, kein kurzfristiger Effekt.",
+          "Persönliche Beratungen auf Anfrage. Plan, Auswertung und Anpassung — passend zu Ihrer Entwicklung.",
+        ],
+      },
     ],
     contactTitle: "Wie starten",
     contactNote: "Buchung für Coaching und Ernährung — direkt: WhatsApp, Telegram oder das Formular auf der Kontaktseite.",

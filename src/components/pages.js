@@ -600,35 +600,32 @@ export function trainingPage(copy) {
 }
 
 export function coachingPage(copy) {
-  const c = copy.coaching || { services: [] };
+  const c = copy.coaching || { blocks: [] };
+  const fallbackImg = assets.mosheGarden;
+  const resolveImg = (key) => (key && assets[key]) || fallbackImg;
+  const blocks = c.blocks || [];
   return `
     ${pageHero(copy.pages.coaching)}
+    ${c.intro ? `
     <section class="section">
-      <div class="container media-split">
-        <div class="text-stack reveal">
-          ${c.intro ? `<p>${c.intro}</p>` : ""}
-          ${c.closingLine ? `<p class="coaching-closing">${c.closingLine}</p>` : ""}
-        </div>
-        <figure class="image-frame reveal"><img src="${assets.mosheGarden}" alt="" onerror="this.onerror=null;this.src='${assets.mosheBowl}';" /></figure>
-      </div>
-    </section>
-    ${c.services && c.services.length ? `
-    <section class="section muted-band">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">${copy.pages.coaching.eyebrow}</p>
-          <h2>${c.servicesTitle || ""}</h2>
-        </div>
-        <div class="coaching-services">
-          ${c.services.map(([title, text]) => `
-            <article class="coaching-service-card reveal">
-              <h3>${title}</h3>
-              <p>${text}</p>
-            </article>
-          `).join("")}
-        </div>
+      <div class="container coaching-intro reveal">
+        <p>${c.intro}</p>
+        ${c.closingLine ? `<p class="coaching-closing">${c.closingLine}</p>` : ""}
       </div>
     </section>` : ""}
+    ${blocks.map((b, i) => `
+      <section class="section ${i % 2 === 1 ? "muted-band" : ""}">
+        <div class="container coaching-block">
+          <figure class="coaching-block-image reveal">
+            <img src="${resolveImg(b.image)}" alt="${b.title}" loading="lazy" onerror="this.onerror=null;this.src='${fallbackImg}';" />
+          </figure>
+          <div class="coaching-block-text reveal">
+            <h2>${b.title}</h2>
+            ${(b.paragraphs || []).map((p) => `<p>${p}</p>`).join("")}
+          </div>
+        </div>
+      </section>
+    `).join("")}
     <section class="section">
       <div class="container">
         <div class="cta-panel reveal">
