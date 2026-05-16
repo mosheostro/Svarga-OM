@@ -1,6 +1,6 @@
 import { dictionary, routes } from "./data/content.js";
 import { shell } from "./components/layout.js";
-import { articlePage, blogPage, contactPage, faqPage, homePage, masterPage, practicePage, programDetailPage, programPage, simplePage, svargaPage, testimonialsPage } from "./components/pages.js";
+import { articlePage, blogPage, coachingPage, contactPage, faqPage, homePage, masterPage, practicePage, programDetailPage, programPage, simplePage, svargaPage, testimonialsPage, trainingPage } from "./components/pages.js";
 import "./styles/main.css";
 
 const app = document.querySelector("#app");
@@ -92,6 +92,8 @@ function renderMain(route, content) {
   else if (route === "contact") main.innerHTML = contactPage(content);
   else if (route === "testimonials") main.innerHTML = testimonialsPage(content);
   else if (route === "practice") main.innerHTML = practicePage(content);
+  else if (route === "training") main.innerHTML = trainingPage(content);
+  else if (route === "coaching") main.innerHTML = coachingPage(content);
   else main.innerHTML = simplePage(content, route);
 
   main.focus({ preventScroll: true });

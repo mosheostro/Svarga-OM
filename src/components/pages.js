@@ -536,6 +536,113 @@ function findCardBySlug(copy, slug) {
   return null;
 }
 
+export function trainingPage(copy) {
+  const t = copy.training || { categories: [], introParagraphs: [] };
+  const fallback = "/assets/svarga-practice.webp";
+  const renderItem = ([slug, title, desc]) => {
+    const card = findCardBySlug(copy, slug);
+    const img = (card && card[2]) || fallback;
+    return `
+      <li class="training-card">
+        <a class="training-thumb" href="${routeWithLang(slug, copy.code)}" aria-label="${title}">
+          <img src="${img}" alt="" loading="lazy" onerror="this.onerror=null;this.src='${fallback}';" />
+        </a>
+        <div class="training-card-body">
+          <a class="training-card-title" href="${routeWithLang(slug, copy.code)}">${title}</a>
+          <p class="training-card-desc">${desc}</p>
+        </div>
+      </li>
+    `;
+  };
+  return `
+    ${pageHero(copy.pages.training)}
+    <section class="section">
+      <div class="container training-intro reveal">
+        <h2>${t.introTitle || ""}</h2>
+        ${(t.introParagraphs || []).map((p) => `<p>${p}</p>`).join("")}
+        ${t.futureNote ? `<p class="training-future">${t.futureNote}</p>` : ""}
+      </div>
+    </section>
+    <section class="section muted-band">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">${copy.pages.training.eyebrow}</p>
+          <h2>${t.categoriesTitle || ""}</h2>
+        </div>
+        <div class="training-categories">
+          ${(t.categories || []).map((cat) => `
+            <article class="training-category reveal">
+              <header class="training-category-head">
+                <span class="training-category-key" aria-hidden="true">${cat.key}</span>
+                <div>
+                  <h3>${cat.title}</h3>
+                  ${cat.intro ? `<p>${cat.intro}</p>` : ""}
+                </div>
+              </header>
+              ${cat.items && cat.items.length ? `<ul class="training-card-list">${cat.items.map(renderItem).join("")}</ul>` : ""}
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div>
+            <h2>${copy.home && copy.home.bannerTitle ? copy.home.bannerTitle : copy.pages.contact.title}</h2>
+            <p>${copy.home && copy.home.bannerText ? copy.home.bannerText : copy.pages.contact.lead}</p>
+          </div>
+          <a class="pill-button light" href="${routeWithLang("contact", copy.code)}">${copy.pages.contact.title}</a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+export function coachingPage(copy) {
+  const c = copy.coaching || { services: [] };
+  return `
+    ${pageHero(copy.pages.coaching)}
+    <section class="section">
+      <div class="container media-split">
+        <div class="text-stack reveal">
+          ${c.intro ? `<p>${c.intro}</p>` : ""}
+          ${c.closingLine ? `<p class="coaching-closing">${c.closingLine}</p>` : ""}
+        </div>
+        <figure class="image-frame reveal"><img src="${assets.mosheGarden}" alt="" onerror="this.onerror=null;this.src='${assets.mosheBowl}';" /></figure>
+      </div>
+    </section>
+    ${c.services && c.services.length ? `
+    <section class="section muted-band">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">${copy.pages.coaching.eyebrow}</p>
+          <h2>${c.servicesTitle || ""}</h2>
+        </div>
+        <div class="coaching-services">
+          ${c.services.map(([title, text]) => `
+            <article class="coaching-service-card reveal">
+              <h3>${title}</h3>
+              <p>${text}</p>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    </section>` : ""}
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div>
+            <h2>${c.contactTitle || copy.pages.contact.title}</h2>
+            <p>${c.contactNote || copy.pages.contact.lead}</p>
+          </div>
+          <a class="pill-button light" href="${routeWithLang("contact", copy.code)}">${copy.pages.contact.title}</a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 export function simplePage(copy, id) {
   const page = copy.pages[id] || copy.pages.home;
   const paragraphs = copy.simpleBodies[id] || [page.lead];

@@ -19,6 +19,10 @@ export function shell(copy, route) {
           <a class="cart-button" href="${routeWithLang("courses", copy.code)}" aria-label="${copy.cart}">
             <span class="cart-glyph"></span><span class="cart-count">0</span>
           </a>
+          <a class="training-link" href="${routeWithLang("training", copy.code)}">
+            <span class="training-glyph" aria-hidden="true"></span>
+            <span>${(copy.menu.find((m) => m[0] === "training") || [, "Training"])[1]}</span>
+          </a>
           <a class="account-link" href="${routeWithLang("account", copy.code)}">${copy.account}</a>
           <button type="button" class="theme-button" data-theme-toggle aria-label="${copy.themeLabel}">
             <span data-theme-label>${copy.themeDark}</span>

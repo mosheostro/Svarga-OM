@@ -48,6 +48,8 @@ export const routes = [
   "home",
   "master",
   "svarga",
+  "training",
+  "coaching",
   "courses",
   "marathon",
   "retreat",
@@ -146,6 +148,8 @@ const ru = {
     ["home", "Главная"],
     ["master", "О мастере"],
     ["svarga", "О методе"],
+    ["training", "Обучение"],
+    ["coaching", "Коучинг и нутрициология"],
     ["courses", "Курсы"],
     ["marathon", "Марафоны"],
     ["retreat", "Ретриты"],
@@ -161,9 +165,11 @@ const ru = {
     credit: "© 2026 Svarga · Moshe Ostrovsky",
     craft: "Сделано с заботой о практикующих.",
     primary: [
+      ["training", "Обучение"],
       ["courses", "Курсы"],
       ["marathon", "Марафоны"],
       ["retreat", "Ретриты"],
+      ["coaching", "Коучинг"],
       ["blog", "Блог"],
       ["testimonials", "Отзывы"],
       ["events", "Расписание"],
@@ -251,6 +257,16 @@ const ru = {
       eyebrow: "Практика",
       title: "Найдите свой путь развития тела, дыхания и сознания",
       lead: "Каталог программ Моше Островского: онлайн-курсы, тематические марафоны и мини-курсы, которые встраиваются в повседневный график и дают глубокие результаты.",
+    },
+    training: {
+      eyebrow: "Обучение",
+      title: "Обучение и образование",
+      lead: "Структурированные направления практики — от дыхания и энергии до структурной работы с телом, нервной системой и интегральных систем Сварги.",
+    },
+    coaching: {
+      eyebrow: "Сопровождение",
+      title: "Интегральный коучинг и нутрициология",
+      lead: "Личные сессии и нутрициологическое сопровождение — адаптация практик к индивидуальным целям и состоянию.",
     },
     events: { eyebrow: "Расписание", title: "Расписание", lead: "Календарь онлайн и офлайн встреч, запусков и открытых сессий." },
   },
@@ -592,6 +608,93 @@ const ru = {
       text: "Если вы чувствуете хроническую усталость, тревогу или ментальный перегруз — эти курсы помогут восстановить гармонию, снять стресс и вернуть энергию.",
     },
   ],
+  training: {
+    introTitle: "Опыт обучения",
+    introParagraphs: [
+      "Опыт преподавания — и онлайн, и офлайн. Работа в групповых сессиях, ретритах и живых тренингах.",
+      "Сейчас бóльшая часть занятий проходит онлайн — в силу расписания. Офлайн-сессии возможны при формировании группы или по приглашению.",
+      "Индивидуальный коучинг и сопровождение 1:1 — доступны по запросу.",
+    ],
+    futureNote: "В ближайшее время на сайте появятся самостоятельные курсы — для покупки и домашней практики.",
+    categoriesTitle: "Направления обучения",
+    categories: [
+      {
+        key: "A",
+        title: "Дыхательные практики",
+        intro: "Улучшение здоровья, ментальная ясность и эмоциональный баланс. Дыхание — фундамент и самый доступный инструмент саморегуляции.",
+        items: [
+          ["course-qigong", "Цигун жизненной силы", "Возвращает энергию и снимает хроническую усталость."],
+        ],
+      },
+      {
+        key: "B",
+        title: "Энергетические практики (система Цигун)",
+        intro: "Очищение, накопление и распределение энергии. Мягкий и жёсткий цигун, система «Кремень», вьетнамские вариации.",
+        items: [
+          ["course-zdravotel", "ЗДРАВОТЕЛ", "Внутренняя сила и энергетический баланс для опытных практикующих."],
+          ["course-iron-shirt", "Железная рубашка", "Жёсткий цигун: плотность тела и устойчивость к нагрузке."],
+          ["course-kremen", "Кремень 1-й уровень", "Базовая волевая устойчивость и физическая плотность."],
+          ["course-kremen-h2", "Кремень 2-й уровень", "Продвинутая внутренняя сила для опытных учеников."],
+          ["marathon-hard-qigong", "Даосский жёсткий цигун", "Интенсив для собранности и базовой энергетической системы."],
+          ["marathon-daoist-soft", "Даосский цигун (мягкий)", "Подготовительный цикл для входящих в практику."],
+        ],
+      },
+      {
+        key: "C",
+        title: "Структурная работа с телом",
+        intro: "Выравнивание позвоночника, осанки и работы внутренних органов. Баланс телесных систем.",
+        items: [
+          ["course-iron-shirt", "Железная рубашка", "Плотность тела через дыхание и точечное напряжение."],
+        ],
+      },
+      {
+        key: "D",
+        title: "Нервная система и сенситивность",
+        intro: "Регуляция нервной системы, стрессоустойчивость и когнитивная ясность. Особенно полезно после 40, но подходит в любом возрасте.",
+        items: [
+          ["course-sensitiv", "Сенситив — Здоровье мозга", "Тренировка чувствительности и нейропластичности."],
+        ],
+      },
+      {
+        key: "E",
+        title: "Продвинутые интегральные практики",
+        intro: "Тонкие, но мощные методы долгосрочной регуляции, психологической устойчивости и трансформации.",
+        items: [
+          ["course-derevo", "Древо совершенства", "Внутренняя сила и устойчивая гармония в жизни."],
+        ],
+      },
+      {
+        key: "F",
+        title: "Интегральная система Сварга",
+        intro: "Холистическая система: дыхание, энергия, омоложение, нервная система, медитативная трансформация. Полное системное развитие человека.",
+        items: [
+          ["marathon-svarga", "Система Сварга", "Интегральный марафон по всей системе за 21 день."],
+        ],
+      },
+      {
+        key: "G",
+        title: "Медитативные практики",
+        intro: "Эмоциональная трансформация, расширение осознанности, внутренняя устойчивость и ясность.",
+        items: [
+          ["course-heart-radiance", "Медитация сердечного радения", "Тёплая внутренняя радость, разворачивающаяся изнутри наружу."],
+          ["marathon-vipassana", "Випассана", "Наблюдение за внутренним без вмешательства — ясность и спокойствие."],
+          ["marathon-tantra", "Тантра чистой души", "Контакт с собой и выравнивание внутреннего мужского и женского начала."],
+        ],
+      },
+    ],
+  },
+  coaching: {
+    intro: "Сейчас я прохожу обучение на интегрального коуча-терапевта и одновременно работаю как специалист по нутрициологии. Моя задача — не заменять врача или психолога, а быть рядом и помогать человеку выстроить целостный образ жизни.",
+    servicesTitle: "Что входит в сопровождение",
+    services: [
+      ["Индивидуальные коуч-сессии", "Прояснение запроса, работа с состоянием и шаги, которые встраиваются в реальную жизнь."],
+      ["Нутрициологические консультации", "Питание и образ жизни — без жёстких диет, с опорой на ваши задачи и состояние."],
+      ["Адаптация практик под вас", "Дыхание, движение и медитация подбираются по уровню, расписанию и приоритетам."],
+    ],
+    contactTitle: "Как начать",
+    contactNote: "Запись на коучинг и нутрициологию — напрямую: WhatsApp, Telegram или форма на странице контактов.",
+    closingLine: "Буду рад поддержать вас с заботой и вниманием.",
+  },
   faq: [
     ["Что даёт система Сварга?", "Внутреннюю силу, осознанность, рост энергии и улучшение физического состояния. Постепенно нормализуется сон, снижается стресс, меняется качество жизни."],
     ["Как проходят занятия?", "Дыхательные практики, осознанные движения, работа с вниманием и медитации. Всё направлено на гармонизацию тела и разума и раскрытие внутреннего потенциала."],
@@ -856,6 +959,8 @@ const he = {
     ["home", "עמוד הבית"],
     ["master", "על המאסטר"],
     ["svarga", "מהי השיטה"],
+    ["training", "לימוד"],
+    ["coaching", "אימון ותזונה"],
     ["courses", "קורסים"],
     ["marathon", "מרתונים"],
     ["retreat", "ריטריטים"],
@@ -871,9 +976,11 @@ const he = {
     credit: "© 2026 סוורגה · משה אוסטרובסקי",
     craft: "נבנה בקפידה למתרגלים מחויבים.",
     primary: [
+      ["training", "לימוד"],
       ["courses", "קורסים"],
       ["marathon", "מרתונים"],
       ["retreat", "ריטריטים"],
+      ["coaching", "אימון"],
       ["blog", "בלוג"],
       ["testimonials", "המלצות"],
       ["events", "לוח זמנים"],
@@ -961,6 +1068,16 @@ const he = {
       eyebrow: "תרגול",
       title: "מצאו את הדרך שלכם לפיתוח גוף, נשימה ותודעה",
       lead: "קטלוג התוכניות של משה: קורסים מקוונים, מרתונים נושאיים ומיני-קורסים. משתלבים בלוח היומיומי ונותנים תוצאות עמוקות.",
+    },
+    training: {
+      eyebrow: "לימוד",
+      title: "לימוד והכשרה",
+      lead: "כיוונים מובנים של תרגול — מנשימה ואנרגיה ועד עבודה מבנית עם הגוף, מערכת העצבים והשיטות האינטגרליות של סוורגה.",
+    },
+    coaching: {
+      eyebrow: "ליווי",
+      title: "קואצ'ינג אינטגרטיבי ותזונה",
+      lead: "מפגשים אישיים וליווי תזונתי — התאמת תרגולים למטרות ולמצב האישי שלכם.",
     },
     events: { eyebrow: "לוח זמנים", title: "לוח זמנים", lead: "יומן מפגשים מקוונים ופרונטליים, השקות ומפגשים פתוחים." },
   },
@@ -1293,6 +1410,93 @@ const he = {
     { title: "למי שמחפש עומק ורוחניות", text: "צלילה שפותחת אופקים חדשים של הרמוניה, התעוררות ומודעות. חזרה אל הכוח האמיתי וטוהר התודעה." },
     { title: "למי שעייף ועמוס", text: "אם אתם בעייפות כרונית, חרדה או עומס מנטלי — הקורסים האלה משקמים הרמוניה, מורידים לחץ ומחזירים אנרגיה." },
   ],
+  training: {
+    introTitle: "ניסיון בהוראה",
+    introParagraphs: [
+      "ניסיון בהוראה — אונליין ופרונטלי. עבודה במפגשים קבוצתיים, ריטריטים ואימונים חיים.",
+      "כיום רוב המפגשים מתקיימים אונליין בשל לוח הזמנים. מפגשים פרונטליים אפשריים בהיווצרות קבוצה או בהזמנה.",
+      "קואצ'ינג אישי וליווי 1:1 — זמינים לפי בקשה.",
+    ],
+    futureNote: "בקרוב יופיעו באתר קורסים עצמאיים לרכישה ולתרגול בבית.",
+    categoriesTitle: "כיווני לימוד",
+    categories: [
+      {
+        key: "A",
+        title: "תרגולי נשימה",
+        intro: "שיפור בריאות, בהירות מחשבתית ואיזון רגשי. הנשימה היא הבסיס והכלי הזמין ביותר לוויסות עצמי.",
+        items: [
+          ["course-qigong", "צ'י-גונג של כוח החיים", "מחזיר אנרגיה ומפיג עייפות כרונית."],
+        ],
+      },
+      {
+        key: "B",
+        title: "תרגולי אנרגיה (מערכת הצ'י-גונג)",
+        intro: "טיהור, צבירה וחלוקה של אנרגיה. צ'י-גונג רך וקשיח, שיטת «קרמיין», ווריאציות וייטנאמיות.",
+        items: [
+          ["course-zdravotel", "זדרווטל", "כוח פנימי ואיזון אנרגטי למתרגלים מנוסים."],
+          ["course-iron-shirt", "חולצת הברזל", "צ'י-גונג קשיח: צפיפות גוף ועמידות בעומס."],
+          ["course-kremen", "קרמיין רמה 1", "יציבות רצונית בסיסית וצפיפות פיזית."],
+          ["course-kremen-h2", "קרמיין רמה 2", "כוח פנימי מתקדם למתרגלים מנוסים."],
+          ["marathon-hard-qigong", "צ'י-גונג דאואיסטי קשיח", "אינטנסיב לאיסוף ולמערכת האנרגטית הבסיסית."],
+          ["marathon-daoist-soft", "צ'י-גונג דאואיסטי (רך)", "מחזור הכנה לנכנסים לתרגול."],
+        ],
+      },
+      {
+        key: "C",
+        title: "עבודה מבנית עם הגוף",
+        intro: "יישור עמוד השדרה, תיקון יציבה ואיזון אברים פנימיים. ויסות מערכות הגוף.",
+        items: [
+          ["course-iron-shirt", "חולצת הברזל", "צפיפות גוף דרך נשימה ומתח נקודתי."],
+        ],
+      },
+      {
+        key: "D",
+        title: "מערכת העצבים ורגישות",
+        intro: "ויסות מערכת העצבים, עמידות ללחץ ובהירות קוגניטיבית. שימושי במיוחד אחרי גיל 40, רלוונטי בכל גיל.",
+        items: [
+          ["course-sensitiv", "סנסיטיב — בריאות המוח", "אימון רגישות ופלסטיות עצבית."],
+        ],
+      },
+      {
+        key: "E",
+        title: "תרגולים אינטגרליים מתקדמים",
+        intro: "שיטות עדינות אך עוצמתיות של ויסות ארוך טווח, יציבות פסיכולוגית וטרנספורמציה.",
+        items: [
+          ["course-derevo", "עץ השלמות", "כוח פנימי והרמוניה יציבה בחיים."],
+        ],
+      },
+      {
+        key: "F",
+        title: "המערכת האינטגרלית סוורגה",
+        intro: "מערכת הוליסטית: נשימה, אנרגיה, התחדשות, מערכת עצבים, טרנספורמציה מדיטטיבית. פיתוח מערכתי שלם של האדם.",
+        items: [
+          ["marathon-svarga", "מערכת סוורגה", "מרתון אינטגרלי על כל השיטה במשך 21 יום."],
+        ],
+      },
+      {
+        key: "G",
+        title: "תרגולי מדיטציה",
+        intro: "טרנספורמציה רגשית, הרחבת מודעות, יציבות פנימית ובהירות.",
+        items: [
+          ["course-heart-radiance", "מדיטציית קרינת הלב", "שמחה פנימית חמימה המתפשטת מבפנים החוצה."],
+          ["marathon-vipassana", "ויפאסנה", "התבוננות במה שקורה בפנים — בהירות ושלווה."],
+          ["marathon-tantra", "טנטרת הנשמה הזכה", "קשר עם עצמך ויישור הזכרי-נקבי הפנימי."],
+        ],
+      },
+    ],
+  },
+  coaching: {
+    intro: "כעת אני בלימודי קואצ'ינג אינטגרטיבי-טיפולי ובמקביל עוסק בתזונה. תפקידי אינו להחליף רופא או פסיכולוג — אלא להיות לצידכם ולעזור לבנות אורח חיים שלם.",
+    servicesTitle: "מה כולל הליווי",
+    services: [
+      ["מפגשי קואצ'ינג אישיים", "הבהרת הבקשה, עבודה עם המצב וצעדים שמשתלבים בחיים האמיתיים."],
+      ["ייעוץ תזונתי", "תזונה ואורח חיים — בלי דיאטות קשוחות, מותאם למטרות ולמצב שלכם."],
+      ["התאמת תרגולים אליכם", "נשימה, תנועה ומדיטציה נבחרים לפי הרמה, לוח הזמנים והעדיפויות."],
+    ],
+    contactTitle: "איך מתחילים",
+    contactNote: "הרשמה לקואצ'ינג ולתזונה — ישירות: וואטסאפ, טלגרם או טופס בעמוד הקשר.",
+    closingLine: "אשמח לתמוך בכם בדאגה ובקשב.",
+  },
   faq: [
     ["מה מעניקה שיטת סוורגה?", "כוח פנימי, מודעות, יותר אנרגיה ומצב גופני טוב יותר. בהדרגה — שינה תקינה, פחות לחץ, איכות חיים משופרת."],
     ["איך מתנהלים השיעורים?", "תרגילי נשימה, תנועות מודעות, עבודה עם קשב ומדיטציות. הכול מכוון להרמוניה בין גוף לנפש ולמימוש הפוטנציאל."],
@@ -1538,6 +1742,8 @@ const en = {
     ["home", "Home"],
     ["master", "About Master"],
     ["svarga", "About Method"],
+    ["training", "Training"],
+    ["coaching", "Coaching & Nutrition"],
     ["courses", "Courses"],
     ["marathon", "Marathons"],
     ["retreat", "Retreats"],
@@ -1553,9 +1759,11 @@ const en = {
     credit: "© 2026 Svarga · Moshe Ostrovsky",
     craft: "Crafted for committed practitioners.",
     primary: [
+      ["training", "Training"],
       ["courses", "Courses"],
       ["marathon", "Marathons"],
       ["retreat", "Retreats"],
+      ["coaching", "Coaching"],
       ["blog", "Blog"],
       ["testimonials", "Reviews"],
       ["events", "Schedule"],
@@ -1604,6 +1812,8 @@ const en = {
     terms: { eyebrow: "Legal", title: "Terms of Use", lead: "Conditions of purchase, access, intellectual property and liability for using the Svarga platform." },
     accessibility: { eyebrow: "Legal", title: "Accessibility Statement", lead: "Website accessibility status, measures taken, and the accessibility coordinator's contact details." },
     practice: { eyebrow: "Practice", title: "Find your path of body, breath, and consciousness", lead: "Catalog of Moshe's programs: online courses, marathons, and mini-courses. Embed into daily life with deep results." },
+    training: { eyebrow: "Training", title: "Training & Education", lead: "Structured directions of practice — breath and energy, structural body work, nervous system care, and the integral systems of Svarga." },
+    coaching: { eyebrow: "Coaching", title: "Integrative Coaching & Nutritional Guidance", lead: "Personal sessions and nutrition support — adapting the practice to your individual goals and current state." },
     events: { eyebrow: "Events", title: "Schedule", lead: "Calendar of online and onsite sessions, launches, and open events." },
   },
   home: {
@@ -1744,6 +1954,93 @@ const en = {
     { title: "For those seeking depth and spirituality", text: "Immersion that opens new horizons of inner harmony, awakening, and awareness. A return to true strength and clarity of mind." },
     { title: "For those overloaded and tired", text: "If you feel chronic fatigue, anxiety, or mental overload — these courses restore harmony, drop stress, and bring energy back." },
   ],
+  training: {
+    introTitle: "Teaching experience",
+    introParagraphs: [
+      "Teaching experience covers both online and in-person formats — group sessions, retreats, and live training.",
+      "Most sessions currently run online due to scheduling. In-person sessions are possible when a group forms or by invitation.",
+      "1:1 coaching and personal mentoring are available on request.",
+    ],
+    futureNote: "Self-study courses for purchase and home practice will be released on the site soon.",
+    categoriesTitle: "Training directions",
+    categories: [
+      {
+        key: "A",
+        title: "Breathing practices",
+        intro: "Health, mental clarity, and emotional balance. Breath is the foundation and the most accessible tool of self-regulation.",
+        items: [
+          ["course-qigong", "Qigong of Life Force", "Restores energy and lifts chronic fatigue."],
+        ],
+      },
+      {
+        key: "B",
+        title: "Energy practices (Qigong system)",
+        intro: "Energy purification, accumulation, and distribution. Soft and hard Qigong, the «Kremen» system, Vietnamese variations.",
+        items: [
+          ["course-zdravotel", "ZDRAVOTEL", "Inner strength and energy balance for experienced practitioners."],
+          ["course-iron-shirt", "Iron Shirt", "Hard qigong: body density and resilience to load."],
+          ["course-kremen", "Kremen Level 1", "Base willful resilience and physical density."],
+          ["course-kremen-h2", "Kremen Level 2", "Advanced inner strength for seasoned practitioners."],
+          ["marathon-hard-qigong", "Hard Daoist Qigong", "Intensive for collectedness and base energy system."],
+          ["marathon-daoist-soft", "Daoist Qigong (Soft)", "Preparatory cycle for new entrants."],
+        ],
+      },
+      {
+        key: "C",
+        title: "Structural body work",
+        intro: "Spine alignment, posture correction, internal-organ work, and body-system balance.",
+        items: [
+          ["course-iron-shirt", "Iron Shirt", "Body density through breath and pointed tension."],
+        ],
+      },
+      {
+        key: "D",
+        title: "Nervous system & sensory training",
+        intro: "Nervous system regulation, stress resilience, and cognitive clarity. Especially relevant after 40 — useful at any age.",
+        items: [
+          ["course-sensitiv", "Sensitiv — Brain Health", "Trains sensitivity and neuroplasticity."],
+        ],
+      },
+      {
+        key: "E",
+        title: "Advanced integrative practices",
+        intro: "Subtle but powerful methods for long-term regulation, psychological stability, and lasting transformation.",
+        items: [
+          ["course-derevo", "Tree of Perfection", "Inner strength and sustained harmony in life."],
+        ],
+      },
+      {
+        key: "F",
+        title: "Svarga integrative system",
+        intro: "A holistic system: breath, energy, rejuvenation, nervous system, meditative transformation. Full-system human development.",
+        items: [
+          ["marathon-svarga", "Svarga System Marathon", "Integral marathon through the whole system in 21 days."],
+        ],
+      },
+      {
+        key: "G",
+        title: "Meditation practices",
+        intro: "Emotional transformation, awareness expansion, inner stability and clarity.",
+        items: [
+          ["course-heart-radiance", "Heart Radiance Meditation", "Warm inner joy radiating from within outward."],
+          ["marathon-vipassana", "Vipassana", "Observe what arises inside — clarity and calm."],
+          ["marathon-tantra", "Tantra of the Clear Soul", "Contact with self and inner masculine/feminine alignment."],
+        ],
+      },
+    ],
+  },
+  coaching: {
+    intro: "I am currently training as an integrative coach-therapist while working as a nutrition specialist. My role is not to replace a doctor or psychologist — it is to stand beside you and help you build a whole, sustainable way of life.",
+    servicesTitle: "What's included",
+    services: [
+      ["Personal coaching sessions", "Clarifying the request, working with state, and concrete steps that fit your real life."],
+      ["Nutritional consulting", "Food and lifestyle — no rigid diets, shaped to your goals and current state."],
+      ["Practice adaptation", "Breath, movement, and meditation tuned to your level, schedule, and priorities."],
+    ],
+    contactTitle: "How to start",
+    contactNote: "Coaching and nutrition bookings — direct: WhatsApp, Telegram, or the form on the contact page.",
+    closingLine: "I'll be glad to support you with care and attention.",
+  },
   faq: [
     ["What does Svarga give?", "Inner strength, awareness, more energy, and better physical state. Gradually: stable sleep, less stress, better quality of life."],
     ["How are sessions conducted?", "Breathing practices, conscious movement, attention work, and meditation. All directed at body-mind harmony and unfolding inner potential."],
@@ -2196,6 +2493,8 @@ const de = {
     ["home", "Startseite"],
     ["master", "Über den Meister"],
     ["svarga", "Über die Methode"],
+    ["training", "Ausbildung"],
+    ["coaching", "Coaching & Ernährung"],
     ["courses", "Kurse"],
     ["marathon", "Marathons"],
     ["retreat", "Retreats"],
@@ -2211,9 +2510,11 @@ const de = {
     credit: "© 2026 Svarga · Moshe Ostrovsky",
     craft: "Sorgfältig gestaltet für engagierte Praktizierende.",
     primary: [
+      ["training", "Ausbildung"],
       ["courses", "Kurse"],
       ["marathon", "Marathons"],
       ["retreat", "Retreats"],
+      ["coaching", "Coaching"],
       ["blog", "Blog"],
       ["testimonials", "Stimmen"],
       ["events", "Zeitplan"],
@@ -2262,6 +2563,8 @@ const de = {
     terms: { eyebrow: "Rechtliches", title: "Nutzungsbedingungen", lead: "Bedingungen für Kauf, Zugang, geistiges Eigentum und Haftung bei der Nutzung der Svarga-Plattform." },
     accessibility: { eyebrow: "Rechtliches", title: "Erklärung zur Barrierefreiheit", lead: "Barrierefreiheitsstatus der Website, umgesetzte Maßnahmen und Kontaktdaten der zuständigen Person." },
     practice: { eyebrow: "Praxis", title: "Finden Sie Ihren Weg von Körper, Atem und Bewusstsein", lead: "Programmkatalog von Moshe: Online-Kurse, thematische Marathons und Mini-Kurse. Lassen sich in den Alltag einbetten und liefern tiefe Ergebnisse." },
+    training: { eyebrow: "Ausbildung", title: "Ausbildung & Lehre", lead: "Strukturierte Praxisrichtungen — Atem und Energie, Körperstruktur, Nervensystem und die integralen Systeme von Svarga." },
+    coaching: { eyebrow: "Coaching", title: "Integratives Coaching & Ernährungsberatung", lead: "Persönliche Sitzungen und Ernährungsbegleitung — Anpassung der Praxis an Ihre individuellen Ziele und Ihren aktuellen Zustand." },
     events: { eyebrow: "Termine", title: "Zeitplan", lead: "Kalender für Online- und Präsenztreffen, Programmstarts und offene Sessions." },
   },
   home: {
@@ -2402,6 +2705,93 @@ const de = {
     { title: "Für jene, die Tiefe und Spiritualität suchen", text: "Ein Eintauchen, das neue Horizonte innerer Harmonie, Erwachen und Bewusstheit öffnet. Rückkehr zur wahren Stärke und Klarheit des Geistes." },
     { title: "Für jene, die überlastet und müde sind", text: "Wenn Sie chronische Müdigkeit, Unruhe oder mentale Überlastung spüren — diese Kurse stellen Harmonie wieder her, lösen Stress und bringen Energie zurück." },
   ],
+  training: {
+    introTitle: "Lehrerfahrung",
+    introParagraphs: [
+      "Erfahrung sowohl online als auch in Präsenz — Gruppensitzungen, Retreats und Live-Trainings.",
+      "Aktuell finden die meisten Einheiten online statt, bedingt durch den Zeitplan. Präsenzeinheiten sind möglich, sobald sich eine Gruppe bildet oder auf Einladung.",
+      "Persönliches 1:1-Coaching und individuelle Begleitung sind auf Anfrage verfügbar.",
+    ],
+    futureNote: "In Kürze erscheinen auf der Website Selbstlernkurse zum Kauf und zur Heimpraxis.",
+    categoriesTitle: "Ausbildungsrichtungen",
+    categories: [
+      {
+        key: "A",
+        title: "Atempraktiken",
+        intro: "Gesundheit, geistige Klarheit und emotionale Balance. Der Atem ist die Grundlage und das zugänglichste Werkzeug der Selbstregulation.",
+        items: [
+          ["course-qigong", "Qigong der Lebenskraft", "Bringt Energie zurück und löst chronische Müdigkeit."],
+        ],
+      },
+      {
+        key: "B",
+        title: "Energiepraktiken (Qigong-System)",
+        intro: "Energiereinigung, -aufbau und -verteilung. Sanftes und hartes Qigong, das «Kremen»-System, vietnamesische Variationen.",
+        items: [
+          ["course-zdravotel", "ZDRAVOTEL", "Innere Stärke und Energiebalance für erfahrene Übende."],
+          ["course-iron-shirt", "Eisenhemd", "Hartes Qigong: Körperdichte und Belastungsstabilität."],
+          ["course-kremen", "Kremen Stufe 1", "Willenskraft und körperliche Dichte als Basis."],
+          ["course-kremen-h2", "Kremen Stufe 2", "Fortgeschrittene innere Kraft für erfahrene Praktizierende."],
+          ["marathon-hard-qigong", "Hartes daoistisches Qigong", "Intensive für Sammlung und Basis-Energiesystem."],
+          ["marathon-daoist-soft", "Daoistisches Qigong (sanft)", "Vorbereitender Zyklus für Einsteiger."],
+        ],
+      },
+      {
+        key: "C",
+        title: "Körperstruktur",
+        intro: "Wirbelsäulenausrichtung, Haltungskorrektur, Arbeit mit inneren Organen und Balance der Körpersysteme.",
+        items: [
+          ["course-iron-shirt", "Eisenhemd", "Körperdichte durch Atem und punktuelle Spannung."],
+        ],
+      },
+      {
+        key: "D",
+        title: "Nervensystem & Sensitivität",
+        intro: "Regulation des Nervensystems, Stressresistenz und kognitive Klarheit. Besonders nach 40 — relevant in jedem Alter.",
+        items: [
+          ["course-sensitiv", "Sensitiv — Gehirngesundheit", "Training von Sensibilität und Neuroplastizität."],
+        ],
+      },
+      {
+        key: "E",
+        title: "Fortgeschrittene integrative Praxis",
+        intro: "Subtile, aber wirkungsvolle Methoden langfristiger Regulation, psychologischer Stabilität und Transformation.",
+        items: [
+          ["course-derevo", "Baum der Vollkommenheit", "Innere Stärke und nachhaltige Harmonie im Leben."],
+        ],
+      },
+      {
+        key: "F",
+        title: "Integrales Svarga-System",
+        intro: "Ein ganzheitliches System: Atem, Energie, Verjüngung, Nervensystem, meditative Transformation. Vollständige Systementwicklung.",
+        items: [
+          ["marathon-svarga", "Svarga-System-Marathon", "Integrale Reise durch das gesamte System in 21 Tagen."],
+        ],
+      },
+      {
+        key: "G",
+        title: "Meditationspraktiken",
+        intro: "Emotionale Transformation, Erweiterung der Bewusstheit, innere Stabilität und Klarheit.",
+        items: [
+          ["course-heart-radiance", "Meditation der Herzensstrahlung", "Warme innere Freude, die von innen nach außen strahlt."],
+          ["marathon-vipassana", "Vipassana", "Beobachtung des Inneren ohne Eingriff — Klarheit und Ruhe."],
+          ["marathon-tantra", "Tantra der klaren Seele", "Kontakt zu sich selbst und innere Ausrichtung des Männlichen und Weiblichen."],
+        ],
+      },
+    ],
+  },
+  coaching: {
+    intro: "Ich befinde mich derzeit in der Ausbildung zum integrativen Coach-Therapeuten und arbeite gleichzeitig als Ernährungsspezialist. Mein Ziel ist es nicht, einen Arzt oder Psychologen zu ersetzen — sondern an Ihrer Seite zu sein und Ihnen zu helfen, einen ganzheitlichen Lebensstil aufzubauen.",
+    servicesTitle: "Inhalt der Begleitung",
+    services: [
+      ["Persönliche Coaching-Sitzungen", "Klärung des Anliegens, Arbeit am Zustand und Schritte, die sich in den realen Alltag einfügen."],
+      ["Ernährungsberatung", "Ernährung und Lebensstil — ohne harte Diäten, abgestimmt auf Ihre Ziele und Ihren Zustand."],
+      ["Praxisanpassung", "Atem, Bewegung und Meditation werden an Ihr Niveau und Ihren Zeitplan angepasst."],
+    ],
+    contactTitle: "Wie starten",
+    contactNote: "Buchung für Coaching und Ernährung — direkt: WhatsApp, Telegram oder das Formular auf der Kontaktseite.",
+    closingLine: "Ich begleite Sie gerne mit Sorgfalt und Aufmerksamkeit.",
+  },
   faq: [
     ["Was bringt das Svarga-System?", "Innere Stärke, Bewusstheit, mehr Energie und einen besseren körperlichen Zustand. Schritt für Schritt: stabilerer Schlaf, weniger Stress, höhere Lebensqualität."],
     ["Wie laufen die Einheiten ab?", "Atemarbeit, bewusste Bewegung, Aufmerksamkeitstraining und Meditation. Alles auf die Harmonie von Körper und Geist und die Entfaltung des inneren Potenzials gerichtet."],
